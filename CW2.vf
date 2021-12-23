@@ -23,7 +23,17 @@
     "variables": [
       "name",
       "quantity",
-      "allergy"
+      "allergy",
+      "beef_burger",
+      "chicken_burger",
+      "vegetable_burger",
+      "coke",
+      "fanta",
+      "chips",
+      "checkname",
+      "row",
+      "status",
+      "delivery_method"
     ],
     "platformData": {
       "slots": [
@@ -41,30 +51,6 @@
           ]
         },
         {
-          "key": "qcoy3az6",
-          "name": "drink",
-          "type": {
-            "value": "Custom"
-          },
-          "color": "#4F9ED1",
-          "inputs": [
-            "drink"
-          ]
-        },
-        {
-          "key": "mnp23abw",
-          "name": "item",
-          "type": {
-            "value": "Custom"
-          },
-          "color": "#3A5999",
-          "inputs": [
-            "burger",
-            "chips",
-            "drink"
-          ]
-        },
-        {
           "key": "0wr03a4q",
           "name": "drink_type",
           "type": {
@@ -75,6 +61,22 @@
             "coke",
             "fanta",
             "7Up"
+          ]
+        },
+        {
+          "key": "lp16c3dce",
+          "name": "item",
+          "type": {
+            "value": "Custom"
+          },
+          "color": "#4F9ED1",
+          "inputs": [
+            "beef burger",
+            "chicken burger",
+            "vegetable burger",
+            "chips",
+            "coke",
+            "fanta"
           ]
         }
       ],
@@ -124,7 +126,7 @@
           "name": "chicken_burger",
           "inputs": [
             {
-              "text": "",
+              "text": "chichen burger",
               "slots": []
             }
           ],
@@ -165,15 +167,15 @@
           "name": "get_item",
           "inputs": [
             {
-              "text": "{{[item].mnp23abw}} ",
+              "text": "{{[item].lp16c3dce}} ",
               "slots": [
-                "mnp23abw"
+                "lp16c3dce"
               ]
             }
           ],
           "slots": [
             {
-              "id": "mnp23abw",
+              "id": "lp16c3dce",
               "dialog": {
                 "prompt": [],
                 "confirm": [],
@@ -207,6 +209,133 @@
               "required": false
             }
           ]
+        },
+        {
+          "key": "gp1x3dnn",
+          "name": "vegetable_burger",
+          "inputs": [
+            {
+              "text": "vegetable burger",
+              "slots": []
+            }
+          ],
+          "slots": []
+        },
+        {
+          "key": "nt1y3d7n",
+          "name": "beef_burger",
+          "inputs": [
+            {
+              "text": "beef burger",
+              "slots": []
+            }
+          ],
+          "slots": []
+        },
+        {
+          "key": "99do3drj",
+          "name": "coke",
+          "inputs": [
+            {
+              "text": "coke",
+              "slots": []
+            }
+          ],
+          "slots": []
+        },
+        {
+          "key": "dtdt3d1m",
+          "name": "fanta",
+          "inputs": [
+            {
+              "text": "fanta",
+              "slots": []
+            }
+          ],
+          "slots": []
+        },
+        {
+          "key": "wxdy3djy",
+          "name": "7Up",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "onjc3d1d",
+          "name": "burger",
+          "inputs": [
+            {
+              "text": "burger",
+              "slots": []
+            }
+          ],
+          "slots": []
+        },
+        {
+          "key": "majh3dxs",
+          "name": "chips",
+          "inputs": [
+            {
+              "text": "chips",
+              "slots": []
+            }
+          ],
+          "slots": []
+        },
+        {
+          "key": "fcjn3dmw",
+          "name": "drink",
+          "inputs": [
+            {
+              "text": "drink",
+              "slots": []
+            }
+          ],
+          "slots": []
+        },
+        {
+          "key": "5411i3d0f",
+          "name": "review",
+          "inputs": [
+            {
+              "text": "review",
+              "slots": []
+            }
+          ],
+          "slots": []
+        },
+        {
+          "key": "d515n3dve",
+          "name": "remove",
+          "inputs": [
+            {
+              "text": "remove",
+              "slots": []
+            }
+          ],
+          "slots": []
+        },
+        {
+          "key": "r51dv3dmj",
+          "name": "collection",
+          "inputs": [
+            {
+              "text": "collection",
+              "slots": []
+            }
+          ],
+          "slots": []
+        },
+        {
+          "key": "jm1e03dj1",
+          "name": "delivery",
+          "inputs": [
+            {
+              "text": "delivery",
+              "slots": []
+            }
+          ],
+          "slots": []
         }
       ],
       "settings": {
@@ -286,39 +415,15 @@
             "slots": []
           },
           {
-            "key": "b58w3ae2",
-            "name": "order",
+            "key": "jfag3awb",
+            "name": "chicken_burger",
             "inputs": [
               {
-                "text": "make order",
+                "text": "chichen burger",
                 "slots": []
               }
             ],
             "slots": []
-          },
-          {
-            "key": "g6b03aq0",
-            "name": "get_burger",
-            "inputs": [
-              {
-                "text": "{{[burger_type].srb43awp}}",
-                "slots": [
-                  "srb43awp"
-                ]
-              }
-            ],
-            "slots": [
-              {
-                "id": "srb43awp",
-                "dialog": {
-                  "prompt": [],
-                  "confirm": [],
-                  "utterances": [],
-                  "confirmEnabled": false
-                },
-                "required": false
-              }
-            ]
           },
           {
             "key": "VF.NO",
@@ -344,6 +449,94 @@
               }
             ],
             "slots": []
+          },
+          {
+            "key": "gp1x3dnn",
+            "name": "vegetable_burger",
+            "inputs": [
+              {
+                "text": "vegetable burger",
+                "slots": []
+              }
+            ],
+            "slots": []
+          },
+          {
+            "key": "nt1y3d7n",
+            "name": "beef_burger",
+            "inputs": [
+              {
+                "text": "beef burger",
+                "slots": []
+              }
+            ],
+            "slots": []
+          },
+          {
+            "key": "99do3drj",
+            "name": "coke",
+            "inputs": [
+              {
+                "text": "coke",
+                "slots": []
+              }
+            ],
+            "slots": []
+          },
+          {
+            "key": "dtdt3d1m",
+            "name": "fanta",
+            "inputs": [
+              {
+                "text": "fanta",
+                "slots": []
+              }
+            ],
+            "slots": []
+          },
+          {
+            "key": "onjc3d1d",
+            "name": "burger",
+            "inputs": [
+              {
+                "text": "burger",
+                "slots": []
+              }
+            ],
+            "slots": []
+          },
+          {
+            "key": "majh3dxs",
+            "name": "chips",
+            "inputs": [
+              {
+                "text": "chips",
+                "slots": []
+              }
+            ],
+            "slots": []
+          },
+          {
+            "key": "fcjn3dmw",
+            "name": "drink",
+            "inputs": [
+              {
+                "text": "drink",
+                "slots": []
+              }
+            ],
+            "slots": []
+          },
+          {
+            "key": "5411i3d0f",
+            "name": "review",
+            "inputs": [
+              {
+                "text": "review",
+                "slots": []
+              }
+            ],
+            "slots": []
           }
         ],
         "slots": [
@@ -355,9 +548,22 @@
             },
             "color": "#457A53",
             "inputs": [
-              "chicken",
-              "beef",
-              "vegetable"
+              "chicken burger",
+              "beef burger",
+              "vegetable burger"
+            ]
+          },
+          {
+            "key": "0wr03a4q",
+            "name": "drink_type",
+            "type": {
+              "value": "Custom"
+            },
+            "color": "#BF395B",
+            "inputs": [
+              "coke",
+              "fanta",
+              "7Up"
             ]
           }
         ]
@@ -380,7 +586,7 @@
       "_id": "61bdea74704ad60007b8ce07",
       "offsetX": -405.8646795040881,
       "offsetY": 486.35373252439985,
-      "zoom": 65.91666666666676,
+      "zoom": 57.33468922972681,
       "nodes": {
         "start00000000000000000000": {
           "nodeID": "start00000000000000000000",
@@ -406,26 +612,26 @@
                   "points": [
                     {
                       "point": [
-                        1372.355540316947,
-                        -277.25857618250916
+                        1372.3555676953792,
+                        -277.25859781918
                       ]
                     },
                     {
                       "point": [
-                        1467.8143492158729,
-                        -277.25857618250916
+                        1421.864455175014,
+                        -277.25859781918
                       ]
                     },
                     {
                       "point": [
-                        1467.8143492158729,
-                        -352.9948089400776
+                        1421.864455175014,
+                        -383.99827531452394
                       ]
                     },
                     {
                       "point": [
-                        1563.2731581147987,
-                        -352.9948089400776
+                        1471.373342654649,
+                        -383.99827531452394
                       ],
                       "allowedToTop": true
                     }
@@ -439,14 +645,15 @@
           "nodeID": "61c23bafd0ce6c27f9399291",
           "type": "block",
           "coords": [
-            1728.266673129447,
-            -383.9934695045001
+            1636.36676807953,
+            -414.99696700889996
           ],
           "data": {
             "name": "Welcome",
             "color": "standard",
             "steps": [
               "61c323763dec051bd84760c8",
+              "61c49313b97af89de2ca3fd3",
               "61c23c23d0ce6c27f93992a2",
               "61c33c8d3dec051bd8476377"
             ]
@@ -461,7 +668,7 @@
             "dialogs": [
               {
                 "voice": "Alexa",
-                "content": "Hi {{[name].name}}! Do you want to make an order now?"
+                "content": "Do you want to make an order now?"
               }
             ],
             "ports": [
@@ -494,7 +701,7 @@
             "ports": [
               {
                 "type": "next",
-                "target": "61c23c23d0ce6c27f93992a2",
+                "target": "61c49313b97af89de2ca3fd3",
                 "id": "61c323763dec051bd84760cb"
               }
             ]
@@ -522,6 +729,11 @@
                 "intent": "VF.YES",
                 "action": "PATH",
                 "mappings": []
+              },
+              {
+                "intent": "VF.NO",
+                "action": "PATH",
+                "mappings": []
               }
             ],
             "else": {
@@ -533,7 +745,7 @@
               "reprompts": [
                 {
                   "voice": "Alexa",
-                  "content": ""
+                  "content": "Sorry, do you want to make transation now?"
                 }
               ]
             },
@@ -549,7 +761,77 @@
               {
                 "type": "",
                 "target": "61c33cb63dec051bd8476382",
-                "id": "61c33c8d3dec051bd847637a"
+                "id": "61c33c8d3dec051bd847637a",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1801.3915025064512,
+                        -56.96961634105446
+                      ]
+                    },
+                    {
+                      "point": [
+                        1851.0295173164732,
+                        -56.96961634105446
+                      ]
+                    },
+                    {
+                      "point": [
+                        1851.0295173164732,
+                        -24.55922481735046
+                      ]
+                    },
+                    {
+                      "point": [
+                        1900.6675321264954,
+                        -24.55922481735046
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "61c489acb97af89de2ca3d95",
+                "id": "61c48958b97af89de2ca3d90",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1801.3916497054552,
+                        -2.4904372656211518
+                      ]
+                    },
+                    {
+                      "point": [
+                        1825.3916497054552,
+                        -2.4904372656211518
+                      ]
+                    },
+                    {
+                      "point": [
+                        1825.3916497054552,
+                        117.65327475322007
+                      ]
+                    },
+                    {
+                      "point": [
+                        1685.7750502908468,
+                        117.65327475322007
+                      ]
+                    },
+                    {
+                      "point": [
+                        1685.7750502908468,
+                        237.7969867720613
+                      ],
+                      "toTop": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -564,7 +846,36 @@
               {
                 "type": "next",
                 "target": "61c3534a3dec051bd84764ec",
-                "id": "61c33cb63dec051bd8476381"
+                "id": "61c33cb63dec051bd8476381",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2230.6857987428025,
+                        25.12570500353842
+                      ]
+                    },
+                    {
+                      "point": [
+                        2286.4332051562924,
+                        25.12570500353842
+                      ]
+                    },
+                    {
+                      "point": [
+                        2286.4332051562924,
+                        -13.714833761244332
+                      ]
+                    },
+                    {
+                      "point": [
+                        2342.1806115697827,
+                        -13.714833761244332
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -573,13 +884,14 @@
           "nodeID": "61c33cb63dec051bd8476382",
           "type": "block",
           "coords": [
-            2158.41829445959,
-            -225.46538091083136
+            2065.6610642132086,
+            -55.557942384632064
           ],
           "data": {
             "name": "order",
             "color": "standard",
             "steps": [
+              "61c49831b97af89de2ca40f7",
               "61c33cb63dec051bd847637f"
             ]
           }
@@ -599,8 +911,44 @@
             "ports": [
               {
                 "type": "next",
-                "target": null,
-                "id": "61c3534a3dec051bd84764eb"
+                "target": "61c492cdb97af89de2ca3f39",
+                "id": "61c3534a3dec051bd84764eb",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2672.1988781860896,
+                        47.22008546986206
+                      ]
+                    },
+                    {
+                      "point": [
+                        2696.1988781860896,
+                        47.22008546986206
+                      ]
+                    },
+                    {
+                      "point": [
+                        2696.1988781860896,
+                        245.20146369597296
+                      ]
+                    },
+                    {
+                      "point": [
+                        2553.127997427129,
+                        245.20146369597296
+                      ]
+                    },
+                    {
+                      "point": [
+                        2553.127997427129,
+                        443.18284192208387
+                      ],
+                      "toTop": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -609,14 +957,293 @@
           "nodeID": "61c3534a3dec051bd84764ec",
           "type": "block",
           "coords": [
-            2103.41829445959,
-            69.55088877300653
+            2507.1742604834703,
+            -44.71354732841002
           ],
           "data": {
             "name": "Finished",
             "color": "standard",
             "steps": [
               "61c3534a3dec051bd84764e9"
+            ]
+          }
+        },
+        "61c489acb97af89de2ca3d92": {
+          "nodeID": "61c489acb97af89de2ca3d92",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Do you want to check your order's status?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c48a08b97af89de2ca3da0",
+                "id": "61c489acb97af89de2ca3d94"
+              }
+            ]
+          }
+        },
+        "61c489acb97af89de2ca3d95": {
+          "nodeID": "61c489acb97af89de2ca3d95",
+          "type": "block",
+          "coords": [
+            1685.7685008069766,
+            238.7983492147711
+          ],
+          "data": {
+            "name": "check status",
+            "color": "standard",
+            "steps": [
+              "61c489acb97af89de2ca3d92",
+              "61c48a08b97af89de2ca3da0"
+            ]
+          }
+        },
+        "61c48a08b97af89de2ca3da0": {
+          "nodeID": "61c48a08b97af89de2ca3da0",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "VF.YES",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "VF.NO",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": "Sorry, do you want to check your order's status now?"
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c48a08b97af89de2ca3da3"
+              },
+              {
+                "type": "",
+                "target": "61c48dfeb97af89de2ca3db3",
+                "id": "61c48a08b97af89de2ca3da1",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1850.7933344804903,
+                        404.4298817580739
+                      ]
+                    },
+                    {
+                      "point": [
+                        1893.773741395929,
+                        404.4298817580739
+                      ]
+                    },
+                    {
+                      "point": [
+                        1893.773741395929,
+                        296.5200232534551
+                      ]
+                    },
+                    {
+                      "point": [
+                        1936.7541483113673,
+                        296.5200232534551
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "61c492cdb97af89de2ca3f39",
+                "id": "61c48a08b97af89de2ca3da2"
+              }
+            ]
+          }
+        },
+        "61c48dfeb97af89de2ca3db0": {
+          "nodeID": "61c48dfeb97af89de2ca3db0",
+          "type": "flow",
+          "data": {
+            "diagramID": "61c48e06975c6f001b4d46d6",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c492cdb97af89de2ca3f39",
+                "id": "61c48dfeb97af89de2ca3db2",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2266.7722013986645,
+                        346.2049530743439
+                      ]
+                    },
+                    {
+                      "point": [
+                        2327.4500994128966,
+                        346.2049530743439
+                      ]
+                    },
+                    {
+                      "point": [
+                        2327.4500994128966,
+                        475.18284192208387
+                      ]
+                    },
+                    {
+                      "point": [
+                        2388.127997427129,
+                        475.18284192208387
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c48dfeb97af89de2ca3db3": {
+          "nodeID": "61c48dfeb97af89de2ca3db3",
+          "type": "block",
+          "coords": [
+            2101.747504835085,
+            265.5213160637236
+          ],
+          "data": {
+            "name": "check order",
+            "color": "standard",
+            "steps": [
+              "61c48dfeb97af89de2ca3db0"
+            ]
+          }
+        },
+        "61c492cdb97af89de2ca3f36": {
+          "nodeID": "61c492cdb97af89de2ca3f36",
+          "type": "flow",
+          "data": {
+            "diagramID": "61c32424b2e7c0001c716874",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c49313b97af89de2ca3fd3",
+                "id": "61c492cdb97af89de2ca3f38",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2388.146087214722,
+                        524.8676649784684
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        2094.2493104240243,
+                        524.8676649784684
+                      ]
+                    },
+                    {
+                      "point": [
+                        2094.2493104240243,
+                        -273.0894269971868
+                      ]
+                    },
+                    {
+                      "point": [
+                        1800.3525336333266,
+                        -273.0894269971868
+                      ],
+                      "reversed": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c492cdb97af89de2ca3f39": {
+          "nodeID": "61c492cdb97af89de2ca3f39",
+          "type": "block",
+          "coords": [
+            2553.121545071404,
+            444.1840760172779
+          ],
+          "data": {
+            "name": "quit",
+            "color": "standard",
+            "steps": [
+              "61c492cdb97af89de2ca3f36"
+            ]
+          }
+        },
+        "61c49313b97af89de2ca3fd3": {
+          "nodeID": "61c49313b97af89de2ca3fd3",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "We offer burgers, chips and drinks. You can make transactions and check your order's status here, and you can say help to get some guidance. If you want to quit earlier, you can say stop at any time. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c23c23d0ce6c27f93992a2",
+                "id": "61c49313b97af89de2ca3fd6"
+              }
+            ]
+          }
+        },
+        "61c49831b97af89de2ca40f7": {
+          "nodeID": "61c49831b97af89de2ca40f7",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "value",
+                "variable": "status",
+                "expression": "ordering"
+              }
+            ],
+            "title": "set status",
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c33cb63dec051bd847637f",
+                "id": "61c49831b97af89de2ca40fa"
+              }
             ]
           }
         }
@@ -626,12 +1253,13 @@
         "61c317da37a2d7001b381f0b",
         "61c3237cb2e7c0001c716872",
         "61c32424b2e7c0001c716874",
-        "61c323fd975c6f001b4d45bb"
+        "61c323fd975c6f001b4d45bb",
+        "61c48e06975c6f001b4d46d6"
       ],
       "name": "ROOT",
       "versionID": "61bdea74704ad60007b8ce06",
       "creatorID": 78782,
-      "modified": 1640203841,
+      "modified": 1640276321,
       "intentStepIDs": [
         "61c32ffb3dec051bd8476352",
         "61c33c383dec051bd8476363",
@@ -643,16 +1271,16 @@
       "name": "help",
       "type": "COMPONENT",
       "zoom": 80,
-      "offsetX": 272,
-      "offsetY": 104,
-      "modified": 1640193277,
+      "offsetX": 241,
+      "offsetY": 41,
+      "modified": 1640275616,
       "nodes": {
         "61c317da3dec051bd8476074": {
           "nodeID": "61c317da3dec051bd8476074",
           "type": "start",
           "coords": [
-            360,
-            120
+            398.75,
+            198.75
           ],
           "data": {
             "name": "Start",
@@ -662,7 +1290,36 @@
               {
                 "type": "next",
                 "target": "61c329aa3dec051bd84762e0",
-                "id": "61c317db3dec051bd8476075"
+                "id": "61c317db3dec051bd8476075",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        563.7747781872825,
+                        279.4335933143016
+                      ]
+                    },
+                    {
+                      "point": [
+                        605.0156381726341,
+                        279.4335933143016
+                      ]
+                    },
+                    {
+                      "point": [
+                        605.0156381726341,
+                        161.0149798804637
+                      ]
+                    },
+                    {
+                      "point": [
+                        646.2564981579857,
+                        161.0149798804637
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -682,7 +1339,7 @@
             "ports": [
               {
                 "type": "next",
-                "target": "61c357583dec051bd8476536",
+                "target": null,
                 "id": "61c329aa3dec051bd84762df"
               }
             ]
@@ -699,91 +1356,37 @@
             "name": "instruction",
             "color": "standard",
             "steps": [
-              "61c329aa3dec051bd84762dd",
-              "61c357583dec051bd8476536"
+              "61c49dedb97af89de2ca44ce",
+              "61c329aa3dec051bd84762dd"
             ]
           }
         },
-        "61c357583dec051bd8476536": {
-          "nodeID": "61c357583dec051bd8476536",
-          "type": "prompt",
+        "61c49dedb97af89de2ca44ce": {
+          "nodeID": "61c49dedb97af89de2ca44ce",
+          "type": "visual",
           "data": {
-            "ports": [
-              {
-                "type": "else",
-                "target": null,
-                "id": "61c357583dec051bd8476539"
-              }
-            ],
-            "noReply": null,
-            "noMatches": {
-              "types": [
-                "reprompt"
-              ],
-              "pathName": "No Match",
-              "randomize": false,
-              "reprompts": [
-                {
-                  "voice": "Alexa",
-                  "content": ""
-                }
-              ]
+            "name": "Visuals",
+            "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1640275614792-menu.png",
+            "device": null,
+            "dimensions": {
+              "width": 766,
+              "height": 540
             },
-            "chips": null,
-            "buttons": null
-          }
-        },
-        "61c3585e3dec051bd8476545": {
-          "nodeID": "61c3585e3dec051bd8476545",
-          "type": "flow",
-          "data": {
-            "diagramID": "61c323fd975c6f001b4d45bb",
-            "variableMap": null,
+            "visualType": "image",
+            "canvasVisibility": "full",
+            "blockColor": "standard",
+            "frameType": "AUTO",
             "ports": [
               {
                 "type": "next",
-                "target": null,
-                "id": "61c3585e3dec051bd8476547"
+                "target": "61c329aa3dec051bd84762dd",
+                "id": "61c49dedb97af89de2ca44d1"
               }
-            ]
-          }
-        },
-        "61c3587d3dec051bd847654f": {
-          "nodeID": "61c3587d3dec051bd847654f",
-          "type": "intent",
-          "data": {
-            "intent": "b58w3ae2",
-            "mappings": [],
-            "availability": "GLOBAL",
-            "ports": [
-              {
-                "type": "next",
-                "target": "61c3585e3dec051bd8476545",
-                "id": "61c3587d3dec051bd8476550"
-              }
-            ]
-          }
-        },
-        "61c3587d3dec051bd8476551": {
-          "nodeID": "61c3587d3dec051bd8476551",
-          "type": "block",
-          "coords": [
-            1252.5,
-            148.78253936767578
-          ],
-          "data": {
-            "name": "make order",
-            "color": "standard",
-            "steps": [
-              "61c3587d3dec051bd847654f",
-              "61c3585e3dec051bd8476545"
             ]
           }
         }
       },
-      "children": [
-        "61c323fd975c6f001b4d45bb"
-      ],
+      "children": [],
       "variables": [],
       "intentStepIDs": [
         "61c3582c3dec051bd847653d",
@@ -799,7 +1402,7 @@
       "zoom": 80,
       "offsetX": -170.7377889048542,
       "offsetY": -132.49302520823244,
-      "modified": 1640191814,
+      "modified": 1640275627,
       "nodes": {
         "61c3237c3dec051bd84760ce": {
           "nodeID": "61c3237c3dec051bd84760ce",
@@ -815,33 +1418,34 @@
             "ports": [
               {
                 "type": "next",
-                "target": "61c323843dec051bd84760d2",
+                "target": "61c323843dec051bd84760d5",
                 "id": "61c3237d3dec051bd84760cf",
                 "data": {
                   "points": [
                     {
                       "point": [
-                        1078.4469391568848,
-                        496.29987764447634
+                        1078.4469299316406,
+                        496.2998628616333
                       ]
                     },
                     {
                       "point": [
-                        1160.5912826887939,
-                        496.29987764447634
+                        1111.726707458496,
+                        496.2998628616333
                       ]
                     },
                     {
                       "point": [
-                        1160.5912826887939,
-                        349.4759202003479
+                        1111.726707458496,
+                        317.264946937561
                       ]
                     },
                     {
                       "point": [
-                        1242.7356262207031,
-                        349.4759202003479
-                      ]
+                        1145.0064849853516,
+                        317.264946937561
+                      ],
+                      "allowedToTop": true
                     }
                   ]
                 }
@@ -874,8 +1478,8 @@
           "nodeID": "61c323843dec051bd84760d5",
           "type": "block",
           "coords": [
-            1408.75,
-            270.0162696838379
+            1310,
+            286.2662696838379
           ],
           "data": {
             "name": "Welcome",
@@ -915,7 +1519,7 @@
             "expressions": [
               {
                 "type": null,
-                "name": "",
+                "name": "New user",
                 "value": [
                   {
                     "logicInterface": "variable",
@@ -936,13 +1540,42 @@
             ],
             "noMatch": {
               "type": "path",
-              "pathName": "No Match"
+              "pathName": "Returning user"
             },
             "ports": [
               {
                 "type": "else",
-                "target": null,
-                "id": "61c3263a3dec051bd8476196"
+                "target": "61c48209b97af89de2ca3d55",
+                "id": "61c3263a3dec051bd8476196",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1475.0247650146484,
+                        547.314441204071
+                      ]
+                    },
+                    {
+                      "point": [
+                        1514.3905868530273,
+                        547.314441204071
+                      ]
+                    },
+                    {
+                      "point": [
+                        1514.3905868530273,
+                        597.2975268363953
+                      ]
+                    },
+                    {
+                      "point": [
+                        1553.7564086914062,
+                        597.2975268363953
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
               },
               {
                 "type": "",
@@ -952,29 +1585,32 @@
                   "points": [
                     {
                       "point": [
-                        1573.7746887207031,
-                        475.5957245826721
+                        1475.0247650146484,
+                        491.84569120407104
                       ]
                     },
                     {
                       "point": [
-                        1663.2550811767578,
-                        475.5957245826721
+                        1513.8801193237305,
+                        491.84569120407104
                       ]
                     },
                     {
                       "point": [
-                        1663.2550811767578,
-                        256.99217081069946
+                        1513.8801193237305,
+                        303.2421565055847
                       ]
                     },
                     {
                       "point": [
-                        1752.7354736328123,
-                        256.99217081069946
+                        1552.7354736328123,
+                        303.2421565055847
                       ]
                     }
-                  ]
+                  ],
+                  "event": {
+                    "type": "New user"
+                  }
                 }
               }
             ]
@@ -989,7 +1625,7 @@
             "ports": [
               {
                 "type": "next",
-                "target": null,
+                "target": "61c48226b97af89de2ca3d63",
                 "id": "61c3268d3dec051bd847619d"
               }
             ]
@@ -999,14 +1635,86 @@
           "nodeID": "61c3268d3dec051bd847619e",
           "type": "block",
           "coords": [
-            1918.75,
-            177.53253936767578
+            1718.75,
+            223.78253936767578
           ],
           "data": {
             "name": "account",
             "color": "standard",
             "steps": [
               "61c3268d3dec051bd847619b"
+            ]
+          }
+        },
+        "61c48209b97af89de2ca3d52": {
+          "nodeID": "61c48209b97af89de2ca3d52",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Welcome back, {{[name].name}}!"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c48209b97af89de2ca3d54"
+              }
+            ]
+          }
+        },
+        "61c48209b97af89de2ca3d55": {
+          "nodeID": "61c48209b97af89de2ca3d55",
+          "type": "block",
+          "coords": [
+            1718.75,
+            566.2988090515137
+          ],
+          "data": {
+            "name": "welcome returning user",
+            "color": "standard",
+            "steps": [
+              "61c48209b97af89de2ca3d52"
+            ]
+          }
+        },
+        "61c48226b97af89de2ca3d60": {
+          "nodeID": "61c48226b97af89de2ca3d60",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Welcome {{[name].name}}!"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c48226b97af89de2ca3d61"
+              }
+            ]
+          }
+        },
+        "61c48226b97af89de2ca3d63": {
+          "nodeID": "61c48226b97af89de2ca3d63",
+          "type": "block",
+          "coords": [
+            2088.75,
+            226.29880905151367
+          ],
+          "data": {
+            "name": "welcome new user",
+            "color": "standard",
+            "steps": [
+              "61c48226b97af89de2ca3d60"
             ]
           }
         }
@@ -1023,22 +1731,25 @@
       "_id": "61c323fd975c6f001b4d45bb",
       "name": "order",
       "type": "COMPONENT",
-      "zoom": 58.64279629290107,
-      "offsetX": 241.67858767910585,
-      "offsetY": 300.653240210445,
-      "modified": 1640203836,
+      "zoom": 68.53753535449502,
+      "offsetX": 241.6279454415985,
+      "offsetY": 389.8185886683466,
+      "modified": 1640276319,
       "nodes": {
         "61c323fd3dec051bd84760f6": {
           "nodeID": "61c323fd3dec051bd84760f6",
           "type": "start",
           "coords": [
-            397.9017654011177,
-            -125.81655026305629
+            397.96506819800186,
+            -237.2732358354332
           ],
           "data": {
             "name": "Start",
             "color": "standard",
-            "steps": [],
+            "steps": [
+              "61c497b8b97af89de2ca406d",
+              "61c49953b97af89de2ca4260"
+            ],
             "ports": [
               {
                 "type": "next",
@@ -1048,33 +1759,33 @@
                   "points": [
                     {
                       "point": [
-                        232.92656311188136,
-                        -45.13297523042062
+                        232.9897572437983,
+                        -156.58967269558516
                       ],
                       "reversed": true
                     },
                     {
                       "point": [
-                        208.92656311188136,
-                        -45.13297523042062
+                        208.9897572437983,
+                        -156.58967269558516
                       ]
                     },
                     {
                       "point": [
-                        208.92656311188136,
-                        53.18463789954397
+                        208.9897572437983,
+                        2.65749675745343
                       ]
                     },
                     {
                       "point": [
-                        362.80739732492464,
-                        53.18463789954397
+                        386.2405360096615,
+                        2.65749675745343
                       ]
                     },
                     {
                       "point": [
-                        362.80739732492464,
-                        77.18463789954397
+                        386.2405360096615,
+                        161.90466621049202
                       ],
                       "toTop": true,
                       "allowedToTop": true
@@ -1110,8 +1821,8 @@
           "nodeID": "61c3469e3dec051bd84763a4",
           "type": "block",
           "coords": [
-            362.8008724488104,
-            78.18595063144328
+            386.2340784035662,
+            162.90600292940618
           ],
           "data": {
             "name": "Items",
@@ -1130,7 +1841,17 @@
             "name": "Choice",
             "choices": [
               {
-                "intent": "skos3afm",
+                "intent": "onjc3d1d",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "majh3dxs",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "fcjn3dmw",
                 "action": "PATH",
                 "mappings": []
               }
@@ -1159,146 +1880,101 @@
               },
               {
                 "type": "",
-                "target": "61c37fbf3dec051bd84765de",
+                "target": "61c380de3dec051bd84765f7",
                 "id": "61c34aec3dec051bd84763c0",
                 "data": {
                   "points": [
                     {
                       "point": [
-                        527.8256320825059,
-                        518.491968858935
+                        551.2588304554056,
+                        603.2119760026828
                       ]
                     },
                     {
                       "point": [
-                        565.302959561873,
-                        518.491968858935
+                        601.388628361382,
+                        603.2119760026828
                       ]
                     },
                     {
                       "point": [
-                        565.302959561873,
-                        122.47160026813896
+                        601.388628361382,
+                        497.7506446664733
                       ]
                     },
                     {
                       "point": [
-                        602.7802870412401,
-                        122.47160026813896
+                        651.5184262673584,
+                        497.7506446664733
                       ],
                       "allowedToTop": true
                     }
                   ]
                 }
-              }
-            ]
-          }
-        },
-        "61c34b7e3dec051bd84763c2": {
-          "nodeID": "61c34b7e3dec051bd84763c2",
-          "type": "speak",
-          "data": {
-            "randomize": true,
-            "canvasVisibility": "preview",
-            "dialogs": [
-              {
-                "voice": "Alexa",
-                "content": "You ordered {{[quantity].quantity}}{{[burger_type].burger_type}}. Do you want to add a new product?"
-              }
-            ],
-            "ports": [
-              {
-                "type": "next",
-                "target": "61c350553dec051bd84763e0",
-                "id": "61c34b7e3dec051bd84763c4"
-              }
-            ]
-          }
-        },
-        "61c34b7e3dec051bd84763c5": {
-          "nodeID": "61c34b7e3dec051bd84763c5",
-          "type": "block",
-          "coords": [
-            2069.9600585716526,
-            185.57245613903342
-          ],
-          "data": {
-            "name": "Confirm",
-            "color": "standard",
-            "steps": [
-              "61c34b7e3dec051bd84763c2",
-              "61c350553dec051bd84763e0"
-            ]
-          }
-        },
-        "61c350553dec051bd84763e0": {
-          "nodeID": "61c350553dec051bd84763e0",
-          "type": "interaction",
-          "data": {
-            "name": "Choice",
-            "choices": [
-              {
-                "intent": "VF.YES",
-                "action": "PATH",
-                "mappings": []
-              },
-              {
-                "intent": "VF.NO",
-                "action": "PATH",
-                "mappings": []
-              }
-            ],
-            "else": {
-              "types": [
-                "reprompt"
-              ],
-              "pathName": "No Match",
-              "randomize": false,
-              "reprompts": [
-                {
-                  "voice": "Alexa",
-                  "content": "Sorry, you can say yes or no. "
-                }
-              ]
-            },
-            "noReply": null,
-            "chips": null,
-            "buttons": null,
-            "ports": [
-              {
-                "type": "else",
-                "target": null,
-                "id": "61c350553dec051bd84763e4"
               },
               {
                 "type": "",
-                "target": null,
-                "id": "61c350553dec051bd84763e3"
-              },
-              {
-                "type": "",
-                "target": "61c350f83dec051bd84763ee",
-                "id": "61c350ea3dec051bd84763e9",
+                "target": "61c37d0a3dec051bd84765ca",
+                "id": "61c47c14b97af89de2ca39cb",
                 "data": {
                   "points": [
                     {
                       "point": [
-                        2234.9847880541774,
-                        428.18312538280173
+                        551.2588304554056,
+                        657.691165321859
                       ]
                     },
                     {
                       "point": [
-                        2346.9211003264127,
-                        428.18312538280173
+                        599.5707263810569,
+                        657.691165321859
                       ]
                     },
                     {
                       "point": [
-                        2346.9211003264127,
-                        603.0697040562545
+                        599.5707263810569,
+                        627.674223923324
+                      ]
+                    },
+                    {
+                      "point": [
+                        647.8826223067083,
+                        627.674223923324
                       ],
-                      "toTop": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "61c383003dec051bd8476623",
+                "id": "61c47c1bb97af89de2ca39cd",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        551.2588304554056,
+                        712.170354641035
+                      ]
+                    },
+                    {
+                      "point": [
+                        607.2812008257645,
+                        712.170354641035
+                      ]
+                    },
+                    {
+                      "point": [
+                        607.2812008257645,
+                        779.8880748460323
+                      ]
+                    },
+                    {
+                      "point": [
+                        663.3035711961232,
+                        779.8880748460323
+                      ],
                       "allowedToTop": true
                     }
                   ]
@@ -1326,15 +2002,15 @@
           "nodeID": "61c350f83dec051bd84763ee",
           "type": "block",
           "coords": [
-            2346.9146190229503,
-            604.0710489625785
+            2608.132349662315,
+            384.30527216209697
           ],
           "data": {
             "name": "check out",
             "color": "standard",
             "steps": [
               "61c3510e3dec051bd84763f7",
-              "61c350f83dec051bd84763eb"
+              "61c47961b97af89de2ca39b7"
             ]
           }
         },
@@ -1347,13 +2023,13 @@
             "dialogs": [
               {
                 "voice": "Alexa",
-                "content": "Proceed to checkout"
+                "content": "Do you want to proceed to checkout?"
               }
             ],
             "ports": [
               {
                 "type": "next",
-                "target": "61c350f83dec051bd84763eb",
+                "target": "61c47961b97af89de2ca39b7",
                 "id": "61c3510e3dec051bd84763fa"
               }
             ]
@@ -1364,11 +2040,11 @@
           "type": "visual",
           "data": {
             "name": "Visuals",
-            "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1640201328529-menu.png",
+            "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1640275640183-menu.png",
             "device": null,
             "dimensions": {
-              "width": 744,
-              "height": 532
+              "width": 766,
+              "height": 540
             },
             "visualType": "image",
             "canvasVisibility": "full",
@@ -1383,266 +2059,18 @@
             ]
           }
         },
-        "61c37d0a3dec051bd84765c7": {
-          "nodeID": "61c37d0a3dec051bd84765c7",
-          "type": "speak",
-          "data": {
-            "randomize": true,
-            "canvasVisibility": "preview",
-            "dialogs": [
-              {
-                "voice": "Alexa",
-                "content": "Please enter the quantity of the choosen item. "
-              }
-            ],
-            "ports": [
-              {
-                "type": "next",
-                "target": "61c37da43dec051bd84765d2",
-                "id": "61c37d0a3dec051bd84765c9"
-              }
-            ]
-          }
-        },
         "61c37d0a3dec051bd84765ca": {
           "nodeID": "61c37d0a3dec051bd84765ca",
           "type": "block",
           "coords": [
-            1631.577721350173,
-            192.42891482905839
+            812.8761386008736,
+            596.6755229359268
           ],
           "data": {
-            "name": "get quantity",
+            "name": "get chips",
             "color": "standard",
             "steps": [
-              "61c37d0a3dec051bd84765c7",
-              "61c37da43dec051bd84765d2",
-              "61c385243dec051bd8476636",
-              "61c3854f3dec051bd8476644"
-            ]
-          }
-        },
-        "61c37da43dec051bd84765d2": {
-          "nodeID": "61c37da43dec051bd84765d2",
-          "type": "capture",
-          "data": {
-            "slot": "VF.NUMBER",
-            "chips": null,
-            "variable": "quantity",
-            "slotInputs": [],
-            "noReply": null,
-            "buttons": null,
-            "ports": [
-              {
-                "type": "next",
-                "target": "61c385243dec051bd8476636",
-                "id": "61c37da43dec051bd84765d5"
-              }
-            ]
-          }
-        },
-        "61c37fbf3dec051bd84765da": {
-          "nodeID": "61c37fbf3dec051bd84765da",
-          "type": "ifV2",
-          "data": {
-            "expressions": [
-              {
-                "type": "and",
-                "name": "",
-                "value": [
-                  {
-                    "logicInterface": "variable",
-                    "type": "equals",
-                    "value": [
-                      {
-                        "type": "variable",
-                        "value": "item"
-                      },
-                      {
-                        "type": "value",
-                        "value": "burger"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": null,
-                "name": "",
-                "value": [
-                  {
-                    "logicInterface": "variable",
-                    "type": "equals",
-                    "value": [
-                      {
-                        "type": "variable",
-                        "value": "item"
-                      },
-                      {
-                        "type": "value",
-                        "value": "chips"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": null,
-                "name": "",
-                "value": [
-                  {
-                    "logicInterface": "variable",
-                    "type": "equals",
-                    "value": [
-                      {
-                        "type": "variable",
-                        "value": "item"
-                      },
-                      {
-                        "type": "value",
-                        "value": "drink"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "noMatch": {
-              "type": "none",
-              "pathName": "No Match"
-            },
-            "ports": [
-              {
-                "type": "else",
-                "target": null,
-                "id": "61c37fbf3dec051bd84765dd"
-              },
-              {
-                "type": "",
-                "target": "61c380de3dec051bd84765f7",
-                "id": "61c37fbf3dec051bd84765dc",
-                "data": {
-                  "points": [
-                    {
-                      "point": [
-                        932.7985022839042,
-                        172.15650670578898
-                      ]
-                    },
-                    {
-                      "point": [
-                        967.7263589972297,
-                        172.15650670578898
-                      ]
-                    },
-                    {
-                      "point": [
-                        967.7263589972297,
-                        -171.42633579840324
-                      ]
-                    },
-                    {
-                      "point": [
-                        1002.6542157105551,
-                        -171.42633579840324
-                      ],
-                      "allowedToTop": true
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "",
-                "target": "61c37d0a3dec051bd84765ca",
-                "id": "61c37fe13dec051bd84765e5",
-                "data": {
-                  "points": [
-                    {
-                      "point": [
-                        932.7985022839042,
-                        226.635675058968
-                      ]
-                    },
-                    {
-                      "point": [
-                        1466.5842133161334,
-                        223.4275940483705
-                      ],
-                      "allowedToTop": true
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "",
-                "target": "61c383003dec051bd8476623",
-                "id": "61c380103dec051bd84765ed",
-                "data": {
-                  "points": [
-                    {
-                      "point": [
-                        932.7985217988205,
-                        281.1148125135327
-                      ]
-                    },
-                    {
-                      "point": [
-                        962.397808228816,
-                        281.1148125135327
-                      ]
-                    },
-                    {
-                      "point": [
-                        962.397808228816,
-                        461.52251384285927
-                      ]
-                    },
-                    {
-                      "point": [
-                        991.9970946588114,
-                        461.52251384285927
-                      ],
-                      "allowedToTop": true
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        "61c37fbf3dec051bd84765de": {
-          "nodeID": "61c37fbf3dec051bd84765de",
-          "type": "block",
-          "coords": [
-            767.7737119079509,
-            91.47291155650566
-          ],
-          "data": {
-            "name": "identify item",
-            "color": "standard",
-            "steps": [
-              "61c37fbf3dec051bd84765da"
-            ]
-          }
-        },
-        "61c380db3dec051bd84765f1": {
-          "nodeID": "61c380db3dec051bd84765f1",
-          "type": "speak",
-          "data": {
-            "randomize": true,
-            "canvasVisibility": "preview",
-            "dialogs": [
-              {
-                "voice": "Alexa",
-                "content": "Which type of burger do you like, beef burger, chicken burger or vegetable burger?"
-              }
-            ],
-            "ports": [
-              {
-                "type": "next",
-                "target": "61c382233dec051bd847660a",
-                "id": "61c380db3dec051bd84765f4"
-              }
+              "61c4759cb97af89de2ca3825"
             ]
           }
         },
@@ -1650,107 +2078,14 @@
           "nodeID": "61c380de3dec051bd84765f7",
           "type": "block",
           "coords": [
-            1167.6477405965825,
-            -202.42504386540844
+            816.511996287811,
+            466.75196262012213
           ],
           "data": {
             "name": "get burger",
             "color": "standard",
             "steps": [
-              "61c380db3dec051bd84765f1",
-              "61c382233dec051bd847660a"
-            ]
-          }
-        },
-        "61c382233dec051bd847660a": {
-          "nodeID": "61c382233dec051bd847660a",
-          "type": "interaction",
-          "data": {
-            "name": "Choice",
-            "choices": [
-              {
-                "intent": "g6b03aq0",
-                "action": "PATH",
-                "mappings": []
-              }
-            ],
-            "else": {
-              "types": [
-                "reprompt"
-              ],
-              "pathName": "No Match",
-              "randomize": false,
-              "reprompts": [
-                {
-                  "voice": "Alexa",
-                  "content": "Sorry, you can say beef burger, chicken burger or vegetable burger?"
-                }
-              ]
-            },
-            "noReply": null,
-            "chips": null,
-            "buttons": null,
-            "ports": [
-              {
-                "type": "else",
-                "target": null,
-                "id": "61c382233dec051bd847660e"
-              },
-              {
-                "type": "",
-                "target": "61c37d0a3dec051bd84765ca",
-                "id": "61c382233dec051bd847660d",
-                "data": {
-                  "points": [
-                    {
-                      "point": [
-                        1332.6723626510209,
-                        -14.293517795987
-                      ]
-                    },
-                    {
-                      "point": [
-                        1399.6282879835776,
-                        -14.293517795987
-                      ]
-                    },
-                    {
-                      "point": [
-                        1399.6282879835776,
-                        223.42761518952847
-                      ]
-                    },
-                    {
-                      "point": [
-                        1466.5842133161343,
-                        223.42761518952847
-                      ],
-                      "allowedToTop": true
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        "61c383003dec051bd8476620": {
-          "nodeID": "61c383003dec051bd8476620",
-          "type": "speak",
-          "data": {
-            "randomize": true,
-            "canvasVisibility": "preview",
-            "dialogs": [
-              {
-                "voice": "Alexa",
-                "content": "Which type of drink do you like, coke, fanta or 7Up?"
-              }
-            ],
-            "ports": [
-              {
-                "type": "next",
-                "target": "61c383313dec051bd847662b",
-                "id": "61c383003dec051bd8476622"
-              }
+              "61c470deb97af89de2ca336f"
             ]
           }
         },
@@ -1758,86 +2093,14 @@
           "nodeID": "61c383003dec051bd8476623",
           "type": "block",
           "coords": [
-            1156.9906523572404,
-            430.5238746288021
+            828.2970503299921,
+            748.8893019996451
           ],
           "data": {
             "name": "get drink",
             "color": "standard",
             "steps": [
-              "61c383003dec051bd8476620",
-              "61c383313dec051bd847662b"
-            ]
-          }
-        },
-        "61c383313dec051bd847662b": {
-          "nodeID": "61c383313dec051bd847662b",
-          "type": "interaction",
-          "data": {
-            "name": "Choice",
-            "choices": [
-              {
-                "intent": "fkqw3a2o",
-                "action": "PATH",
-                "mappings": []
-              }
-            ],
-            "else": {
-              "types": [
-                "reprompt"
-              ],
-              "pathName": "No Match",
-              "randomize": false,
-              "reprompts": [
-                {
-                  "voice": "Alexa",
-                  "content": "Sorry, you can say coke, fanta or 7Up. "
-                }
-              ]
-            },
-            "noReply": null,
-            "chips": null,
-            "buttons": null,
-            "ports": [
-              {
-                "type": "else",
-                "target": null,
-                "id": "61c383313dec051bd847662f"
-              },
-              {
-                "type": "",
-                "target": "61c37d0a3dec051bd84765ca",
-                "id": "61c383313dec051bd847662e",
-                "data": {
-                  "points": [
-                    {
-                      "point": [
-                        1322.0154334959389,
-                        596.1553976630105
-                      ]
-                    },
-                    {
-                      "point": [
-                        1394.299771366263,
-                        596.1553976630105
-                      ]
-                    },
-                    {
-                      "point": [
-                        1394.299771366263,
-                        223.4276151895283
-                      ]
-                    },
-                    {
-                      "point": [
-                        1466.5841092365872,
-                        223.4276151895283
-                      ],
-                      "allowedToTop": true
-                    }
-                  ]
-                }
-              }
+              "61c47351b97af89de2ca3685"
             ]
           }
         },
@@ -1875,32 +2138,32 @@
             "ports": [
               {
                 "type": "next",
-                "target": "61c34b7e3dec051bd84763c5",
+                "target": "61c3b10e940f0325611a694f",
                 "id": "61c3854f3dec051bd8476647",
                 "data": {
                   "points": [
                     {
                       "point": [
-                        1796.6025326383467,
-                        482.95624552538413
+                        1987.1113062004829,
+                        707.3201158374962
                       ]
                     },
                     {
                       "point": [
-                        1850.7844809180383,
-                        482.95624552538413
+                        2018.315554454071,
+                        707.3201158374962
                       ]
                     },
                     {
                       "point": [
-                        1850.7844809180383,
-                        216.57116692570654
+                        2018.315554454071,
+                        419.2945572580373
                       ]
                     },
                     {
                       "point": [
-                        1904.96642919773,
-                        216.57116692570654
+                        2049.519802707659,
+                        419.2945572580373
                       ],
                       "allowedToTop": true
                     }
@@ -1909,10 +2172,656 @@
               }
             ]
           }
+        },
+        "61c3b10e940f0325611a694b": {
+          "nodeID": "61c3b10e940f0325611a694b",
+          "type": "google_sheets",
+          "data": {
+            "user": {
+              "created_at": "2021-12-22T23:07:20.514Z",
+              "creator_id": 78782,
+              "project_id": null,
+              "platform": "Google Sheets",
+              "user_id": "106455312214053924915",
+              "user_data": {
+                "email": "lekang0522@gmail.com",
+                "name": "Lekang Jiang"
+              },
+              "integration_user_id": "gs_int_106455312214053924915",
+              "requires_refresh": null
+            },
+            "sheet": {
+              "value": 0,
+              "label": "order"
+            },
+            "endRow": "",
+            "mapping": [],
+            "startRow": "",
+            "rowNumber": "",
+            "rowValues": [
+              "{{[name].name}}",
+              "{{[beef_burger].beef_burger}}",
+              "{{[chicken_burger].chicken_burger}}",
+              "{{[vegetable_burger].vegetable_burger}}",
+              "{{[chips].chips}}",
+              "{{[coke].coke}}",
+              "{{[fanta].fanta}}",
+              "{{[allergy].allergy}}",
+              "{{[status].status}}"
+            ],
+            "matchValue": "",
+            "spreadsheet": {
+              "value": "1qhWCIbfWGYU6ZV0YN2PPfUth_FJaVRWDZ0K_pWRmSeU",
+              "label": "Burger Box Order"
+            },
+            "headerColumn": null,
+            "selectedAction": "Create Data",
+            "selectedIntegration": "Google Sheets",
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c350f83dec051bd84763ee",
+                "id": "61c3b10e940f0325611a694d",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2379.5380886969874,
+                        586.8961099559298
+                      ]
+                    },
+                    {
+                      "point": [
+                        2411.338498356912,
+                        586.8961099559298
+                      ]
+                    },
+                    {
+                      "point": [
+                        2411.338498356912,
+                        415.30391061191204
+                      ]
+                    },
+                    {
+                      "point": [
+                        2443.138908016837,
+                        415.30391061191204
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "fail",
+                "target": null,
+                "id": "61c3b10e940f0325611a694e"
+              }
+            ]
+          }
+        },
+        "61c3b10e940f0325611a694f": {
+          "nodeID": "61c3b10e940f0325611a694f",
+          "type": "block",
+          "coords": [
+            2214.513334226361,
+            388.2958185537074
+          ],
+          "data": {
+            "name": "save order",
+            "color": "standard",
+            "steps": [
+              "61c49882b97af89de2ca414b",
+              "61c3b10e940f0325611a694b"
+            ]
+          }
+        },
+        "61c470deb97af89de2ca336f": {
+          "nodeID": "61c470deb97af89de2ca336f",
+          "type": "flow",
+          "data": {
+            "diagramID": "61c470e9b2e7c0001c716969",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c47606b97af89de2ca38d9",
+                "id": "61c470deb97af89de2ca3372",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        981.5367421832588,
+                        547.4355090060841
+                      ]
+                    },
+                    {
+                      "point": [
+                        1122.415731508122,
+                        547.4355090060841
+                      ]
+                    },
+                    {
+                      "point": [
+                        1122.415731508122,
+                        579.3199388207919
+                      ]
+                    },
+                    {
+                      "point": [
+                        1263.2947208329854,
+                        579.3199388207919
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c47351b97af89de2ca3685": {
+          "nodeID": "61c47351b97af89de2ca3685",
+          "type": "flow",
+          "data": {
+            "diagramID": "61c47357975c6f001b4d46bb",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c47606b97af89de2ca38d9",
+                "id": "61c47351b97af89de2ca3688",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        993.3217807188139,
+                        829.5728718044139
+                      ]
+                    },
+                    {
+                      "point": [
+                        1128.3082507758995,
+                        829.5728718044139
+                      ]
+                    },
+                    {
+                      "point": [
+                        1128.3082507758995,
+                        579.3199657493353
+                      ]
+                    },
+                    {
+                      "point": [
+                        1263.2947208329854,
+                        579.3199657493353
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c47482b97af89de2ca3817": {
+          "nodeID": "61c47482b97af89de2ca3817",
+          "type": "block",
+          "coords": [
+            1822.0865572882076,
+            564.1885590365829
+          ],
+          "data": {
+            "name": "get allergy",
+            "color": "standard",
+            "steps": [
+              "61c385243dec051bd8476636",
+              "61c3854f3dec051bd8476644"
+            ]
+          }
+        },
+        "61c4759cb97af89de2ca3825": {
+          "nodeID": "61c4759cb97af89de2ca3825",
+          "type": "flow",
+          "data": {
+            "diagramID": "61c475a4b2e7c0001c71696a",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c47606b97af89de2ca38d9",
+                "id": "61c4759cb97af89de2ca3828",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        977.9008156228017,
+                        677.3591414039796
+                      ]
+                    },
+                    {
+                      "point": [
+                        1120.5977682278935,
+                        677.3591414039796
+                      ]
+                    },
+                    {
+                      "point": [
+                        1120.5977682278935,
+                        579.3199657493353
+                      ]
+                    },
+                    {
+                      "point": [
+                        1263.2947208329854,
+                        579.3199657493353
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c47606b97af89de2ca38d6": {
+          "nodeID": "61c47606b97af89de2ca38d6",
+          "type": "flow",
+          "data": {
+            "diagramID": "61c4761f9e224f001b1a4e48",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c4771fb97af89de2ca3990",
+                "id": "61c47606b97af89de2ca38d8"
+              }
+            ]
+          }
+        },
+        "61c47606b97af89de2ca38d9": {
+          "nodeID": "61c47606b97af89de2ca38d9",
+          "type": "block",
+          "coords": [
+            1428.288302423736,
+            548.3212986301946
+          ],
+          "data": {
+            "name": "print order",
+            "color": "standard",
+            "steps": [
+              "61c47606b97af89de2ca38d6",
+              "61c4771fb97af89de2ca3990",
+              "61c47740b97af89de2ca399e"
+            ]
+          }
+        },
+        "61c4771fb97af89de2ca3990": {
+          "nodeID": "61c4771fb97af89de2ca3990",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Do you want to add more product?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c47740b97af89de2ca399e",
+                "id": "61c4771fb97af89de2ca3992"
+              }
+            ]
+          }
+        },
+        "61c47740b97af89de2ca399e": {
+          "nodeID": "61c47740b97af89de2ca399e",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "VF.YES",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "VF.NO",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": ""
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c47740b97af89de2ca39a2"
+              },
+              {
+                "type": "",
+                "target": "61c3469e3dec051bd84763a4",
+                "id": "61c47740b97af89de2ca39a1",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1263.313006822314,
+                        776.4006623760722
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        907.276786803727,
+                        776.4006623760722
+                      ]
+                    },
+                    {
+                      "point": [
+                        907.276786803727,
+                        193.904710450242
+                      ]
+                    },
+                    {
+                      "point": [
+                        551.2405667851398,
+                        193.904710450242
+                      ],
+                      "reversed": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "61c47482b97af89de2ca3817",
+                "id": "61c47743b97af89de2ca39a6",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1593.313006822314,
+                        830.8799063652932
+                      ]
+                    },
+                    {
+                      "point": [
+                        1625.2029731239188,
+                        830.8799063652932
+                      ]
+                    },
+                    {
+                      "point": [
+                        1625.2029731239188,
+                        595.187248371598
+                      ]
+                    },
+                    {
+                      "point": [
+                        1657.0929394255236,
+                        595.187248371598
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c47949b97af89de2ca39ad": {
+          "nodeID": "61c47949b97af89de2ca39ad",
+          "type": "block",
+          "coords": [
+            2968.7127539206376,
+            793.5300567397783
+          ],
+          "data": {
+            "name": "Block",
+            "color": "standard",
+            "steps": [
+              "61c350f83dec051bd84763eb"
+            ]
+          }
+        },
+        "61c47961b97af89de2ca39b7": {
+          "nodeID": "61c47961b97af89de2ca39b7",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "VF.YES",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "VF.NO",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": ""
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c47961b97af89de2ca39bb"
+              },
+              {
+                "type": "",
+                "target": "61c47949b97af89de2ca39ad",
+                "id": "61c47961b97af89de2ca39ba",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2773.1570589162075,
+                        549.9367672560513
+                      ]
+                    },
+                    {
+                      "point": [
+                        2968.7192168384213,
+                        549.9367672560513
+                      ]
+                    },
+                    {
+                      "point": [
+                        2968.7192168384213,
+                        792.5286644550123
+                      ],
+                      "toTop": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": null,
+                "id": "61c47964b97af89de2ca39bf"
+              }
+            ]
+          }
+        },
+        "61c497b8b97af89de2ca406d": {
+          "nodeID": "61c497b8b97af89de2ca406d",
+          "type": "command",
+          "data": {
+            "name": "print order",
+            "next": null,
+            "ports": [],
+            "intent": "5411i3d0f",
+            "mappings": [],
+            "diagramID": "61c4761f9e224f001b1a4e48"
+          }
+        },
+        "61c49882b97af89de2ca414b": {
+          "nodeID": "61c49882b97af89de2ca414b",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "value",
+                "variable": "status",
+                "expression": "being processing"
+              }
+            ],
+            "title": "set status",
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c3b10e940f0325611a694b",
+                "id": "61c49882b97af89de2ca414e"
+              }
+            ]
+          }
+        },
+        "61c49953b97af89de2ca4260": {
+          "nodeID": "61c49953b97af89de2ca4260",
+          "type": "command",
+          "data": {
+            "name": "remove",
+            "next": null,
+            "ports": [],
+            "intent": "d515n3dve",
+            "mappings": [],
+            "diagramID": "61c4995f78fd2c001bbf1955"
+          }
+        },
+        "61c49effb97af89de2ca45ba": {
+          "nodeID": "61c49effb97af89de2ca45ba",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "VF.YES",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "VF.NO",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": ""
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c49effb97af89de2ca45bd"
+              },
+              {
+                "type": "",
+                "target": null,
+                "id": "61c49effb97af89de2ca45bb"
+              },
+              {
+                "type": "",
+                "target": null,
+                "id": "61c49effb97af89de2ca45bc"
+              }
+            ]
+          }
+        },
+        "61c49effb97af89de2ca45b7": {
+          "nodeID": "61c49effb97af89de2ca45b7",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Do you want to add more product?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c49effb97af89de2ca45ba",
+                "id": "61c49effb97af89de2ca45b8"
+              }
+            ]
+          }
+        },
+        "61c49effb97af89de2ca45b2": {
+          "nodeID": "61c49effb97af89de2ca45b2",
+          "type": "block",
+          "coords": [
+            2560.377513327129,
+            744.0931602607101
+          ],
+          "data": {
+            "name": "print order",
+            "color": "standard",
+            "steps": [
+              "61c49effb97af89de2ca45b7",
+              "61c49effb97af89de2ca45ba"
+            ]
+          }
         }
       },
       "children": [
-        "61c3245537a2d7001b381f1c"
+        "61c3245537a2d7001b381f1c",
+        "61c470e9b2e7c0001c716969",
+        "61c47357975c6f001b4d46bb",
+        "61c475a4b2e7c0001c71696a",
+        "61c4761f9e224f001b1a4e48",
+        "61c4995f78fd2c001bbf1955"
       ],
       "variables": [],
       "intentStepIDs": [],
@@ -1926,7 +2835,7 @@
       "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640180359,
+      "modified": 1640272593,
       "nodes": {
         "61c324243dec051bd8476116": {
           "nodeID": "61c324243dec051bd8476116",
@@ -2126,16 +3035,16 @@
       "name": "checkout",
       "type": "COMPONENT",
       "zoom": 80,
-      "offsetX": 272,
-      "offsetY": 104,
-      "modified": 1640190764,
+      "offsetX": 334,
+      "offsetY": 146,
+      "modified": 1640276177,
       "nodes": {
         "61c324553dec051bd847615b": {
           "nodeID": "61c324553dec051bd847615b",
           "type": "start",
           "coords": [
-            360,
-            120
+            282.5,
+            67.5
           ],
           "data": {
             "name": "Start",
@@ -2150,38 +3059,26 @@
                   "points": [
                     {
                       "point": [
-                        525.0247650146484,
-                        200.68357706069946
+                        447.52476501464844,
+                        148.18357944488525
                       ]
                     },
                     {
                       "point": [
-                        549.0247650146484,
-                        200.68357706069946
+                        508.765625,
+                        148.18357944488525
                       ]
                     },
                     {
                       "point": [
-                        549.0247650146484,
-                        157.72427988052368
-                      ]
-                    },
-                    {
-                      "point": [
-                        546.0064849853516,
-                        157.72427988052368
-                      ]
-                    },
-                    {
-                      "point": [
-                        546.0064849853516,
-                        114.76498270034787
+                        508.765625,
+                        114.76494693756102
                       ]
                     },
                     {
                       "point": [
                         570.0064849853516,
-                        114.76498270034787
+                        114.76494693756102
                       ],
                       "allowedToTop": true
                     }
@@ -2200,13 +3097,13 @@
             "dialogs": [
               {
                 "voice": "Alexa",
-                "content": "You ordered {{[burger_type].burger_type}} "
+                "content": "Do you want for collection or delivery?"
               }
             ],
             "ports": [
               {
                 "type": "next",
-                "target": null,
+                "target": "61c49ff0b97af89de2ca45e2",
                 "id": "61c3513f3dec051bd8476401"
               }
             ]
@@ -2220,10 +3117,213 @@
             83.76626968383789
           ],
           "data": {
-            "name": "Order confirmation",
+            "name": "Method",
             "color": "standard",
             "steps": [
-              "61c3513f3dec051bd84763ff"
+              "61c3513f3dec051bd84763ff",
+              "61c49ff0b97af89de2ca45e2"
+            ]
+          }
+        },
+        "61c49ff0b97af89de2ca45e2": {
+          "nodeID": "61c49ff0b97af89de2ca45e2",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "r51dv3dmj",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "jm1e03dj1",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": ""
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c49ff0b97af89de2ca45e6"
+              },
+              {
+                "type": "",
+                "target": "61c4a0a6b97af89de2ca4602",
+                "id": "61c49ff0b97af89de2ca45e5",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        900.0246887207031,
+                        249.39777612686157
+                      ]
+                    },
+                    {
+                      "point": [
+                        950.6405487060547,
+                        249.39777612686157
+                      ]
+                    },
+                    {
+                      "point": [
+                        950.6405487060547,
+                        162.28125238418576
+                      ]
+                    },
+                    {
+                      "point": [
+                        1001.2564086914062,
+                        162.28125238418576
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "61c4a046b97af89de2ca45ef",
+                "id": "61c4a009b97af89de2ca45ea",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        900.0246887207031,
+                        303.87699365615845
+                      ]
+                    },
+                    {
+                      "point": [
+                        950.6405487060547,
+                        303.87699365615845
+                      ]
+                    },
+                    {
+                      "point": [
+                        950.6405487060547,
+                        347.2812523841858
+                      ]
+                    },
+                    {
+                      "point": [
+                        1001.2564086914062,
+                        347.2812523841858
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c4a046b97af89de2ca45ec": {
+          "nodeID": "61c4a046b97af89de2ca45ec",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Live your address here. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c4a05ab97af89de2ca45f7",
+                "id": "61c4a046b97af89de2ca45ee"
+              }
+            ]
+          }
+        },
+        "61c4a046b97af89de2ca45ef": {
+          "nodeID": "61c4a046b97af89de2ca45ef",
+          "type": "block",
+          "coords": [
+            1166.25,
+            316.2825393676758
+          ],
+          "data": {
+            "name": "method confirm",
+            "color": "standard",
+            "steps": [
+              "61c4a046b97af89de2ca45ec",
+              "61c4a05ab97af89de2ca45f7"
+            ]
+          }
+        },
+        "61c4a05ab97af89de2ca45f7": {
+          "nodeID": "61c4a05ab97af89de2ca45f7",
+          "type": "capture",
+          "data": {
+            "slot": "Custom",
+            "chips": null,
+            "variable": "delivery_method",
+            "slotInputs": [],
+            "noReply": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c4a05ab97af89de2ca45fa"
+              }
+            ]
+          }
+        },
+        "61c4a0a6b97af89de2ca45ff": {
+          "nodeID": "61c4a0a6b97af89de2ca45ff",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "value",
+                "variable": "delivery_method",
+                "expression": "collection"
+              }
+            ],
+            "title": "set collection",
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c4a0a6b97af89de2ca4601"
+              }
+            ]
+          }
+        },
+        "61c4a0a6b97af89de2ca4602": {
+          "nodeID": "61c4a0a6b97af89de2ca4602",
+          "type": "block",
+          "coords": [
+            1166.25,
+            131.28253936767578
+          ],
+          "data": {
+            "name": "method confirm",
+            "color": "standard",
+            "steps": [
+              "61c4a0a6b97af89de2ca45ff"
             ]
           }
         }
@@ -2241,7 +3341,7 @@
       "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640190696,
+      "modified": 1640268180,
       "nodes": {
         "61c326963dec051bd84761a5": {
           "nodeID": "61c326963dec051bd84761a5",
@@ -2320,11 +3420,13 @@
             58.76626968383789
           ],
           "data": {
-            "name": "New Block 1",
+            "name": "account",
             "color": "standard",
             "steps": [
               "61c326e03dec051bd84761be",
-              "61c3274b3dec051bd84761ca"
+              "61c3274b3dec051bd84761ca",
+              "61c47ffdb97af89de2ca3ccd",
+              "61c48031b97af89de2ca3cd5"
             ]
           }
         },
@@ -2341,14 +3443,1933 @@
             "ports": [
               {
                 "type": "next",
-                "target": null,
+                "target": "61c47ffdb97af89de2ca3ccd",
                 "id": "61c3274b3dec051bd84761cd"
+              }
+            ]
+          }
+        },
+        "61c47ffdb97af89de2ca3ccd": {
+          "nodeID": "61c47ffdb97af89de2ca3ccd",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Thanks! Your name is {{[name].name}}. Is it correct?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c48031b97af89de2ca3cd5",
+                "id": "61c47ffdb97af89de2ca3cd0"
+              }
+            ]
+          }
+        },
+        "61c48031b97af89de2ca3cd5": {
+          "nodeID": "61c48031b97af89de2ca3cd5",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "VF.YES",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "VF.NO",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": "Sorry I do not understand you. You can simply say yes or no. "
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c48031b97af89de2ca3cd9"
+              },
+              {
+                "type": "",
+                "target": null,
+                "id": "61c48031b97af89de2ca3cd8"
+              },
+              {
+                "type": "",
+                "target": "61c48065b97af89de2ca3ce2",
+                "id": "61c4803eb97af89de2ca3cdd",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        958.7747650146484,
+                        471.27278089523315
+                      ]
+                    },
+                    {
+                      "point": [
+                        1025.6405868530273,
+                        471.27278089523315
+                      ]
+                    },
+                    {
+                      "point": [
+                        1025.6405868530273,
+                        103.53121900558469
+                      ]
+                    },
+                    {
+                      "point": [
+                        1092.5064086914062,
+                        103.53121900558469
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c48065b97af89de2ca3cdf": {
+          "nodeID": "61c48065b97af89de2ca3cdf",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Sorry, could you tell us your name again?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c4808fb97af89de2ca3cec",
+                "id": "61c48065b97af89de2ca3ce1"
+              }
+            ]
+          }
+        },
+        "61c48065b97af89de2ca3ce2": {
+          "nodeID": "61c48065b97af89de2ca3ce2",
+          "type": "block",
+          "coords": [
+            1257.5,
+            72.53253936767578
+          ],
+          "data": {
+            "name": "Error handling",
+            "color": "standard",
+            "steps": [
+              "61c48065b97af89de2ca3cdf",
+              "61c4808fb97af89de2ca3cec",
+              "61c48192b97af89de2ca3d08",
+              "61c480f6b97af89de2ca3cfa"
+            ]
+          }
+        },
+        "61c4808fb97af89de2ca3cec": {
+          "nodeID": "61c4808fb97af89de2ca3cec",
+          "type": "capture",
+          "data": {
+            "slot": "VF.NAME",
+            "chips": null,
+            "variable": "name",
+            "slotInputs": [],
+            "noReply": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c48192b97af89de2ca3d08",
+                "id": "61c4808fb97af89de2ca3ced"
+              }
+            ]
+          }
+        },
+        "61c480f6b97af89de2ca3cfa": {
+          "nodeID": "61c480f6b97af89de2ca3cfa",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "VF.YES",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "VF.NO",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": "Sorry I do not understand you. You can simply say yes or no. "
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c480f6b97af89de2ca3cfe"
+              },
+              {
+                "type": "",
+                "target": null,
+                "id": "61c480f6b97af89de2ca3cfd"
+              },
+              {
+                "type": "",
+                "target": "61c48065b97af89de2ca3cdf",
+                "id": "61c48100b97af89de2ca3d02",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1092.5246887207031,
+                        355.09117364883423
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        1067.485626220703,
+                        355.09117364883423
+                      ]
+                    },
+                    {
+                      "point": [
+                        1067.485626220703,
+                        151.9921898841858
+                      ]
+                    },
+                    {
+                      "point": [
+                        1091.485626220703,
+                        151.9921898841858
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c48192b97af89de2ca3d08": {
+          "nodeID": "61c48192b97af89de2ca3d08",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Thanks! Your name is {{[name].name}}. Is it correct?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c480f6b97af89de2ca3cfa",
+                "id": "61c48192b97af89de2ca3d09"
               }
             ]
           }
         }
       },
       "children": [],
+      "variables": [],
+      "intentStepIDs": [],
+      "versionID": "61bdea74704ad60007b8ce06",
+      "creatorID": 78782
+    },
+    "61c470e9b2e7c0001c716969": {
+      "_id": "61c470e9b2e7c0001c716969",
+      "name": "get burger",
+      "type": "COMPONENT",
+      "zoom": 80,
+      "offsetX": 272,
+      "offsetY": 104,
+      "modified": 1640266982,
+      "nodes": {
+        "61c470eab97af89de2ca3375": {
+          "nodeID": "61c470eab97af89de2ca3375",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c47100b97af89de2ca33d0",
+                "id": "61c470ebb97af89de2ca3376",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        525.0247650146484,
+                        200.68359851837158
+                      ]
+                    },
+                    {
+                      "point": [
+                        576.8906631469727,
+                        200.68359851837158
+                      ]
+                    },
+                    {
+                      "point": [
+                        576.8906631469727,
+                        142.26496601104733
+                      ]
+                    },
+                    {
+                      "point": [
+                        628.7565612792969,
+                        142.26496601104733
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c47100b97af89de2ca33cd": {
+          "nodeID": "61c47100b97af89de2ca33cd",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Which type of burger do you like, beef burger, chicken burger or vegetable burger?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c47203b97af89de2ca351e",
+                "id": "61c47100b97af89de2ca33ce"
+              }
+            ]
+          }
+        },
+        "61c47100b97af89de2ca33d0": {
+          "nodeID": "61c47100b97af89de2ca33d0",
+          "type": "block",
+          "coords": [
+            793.75,
+            111.26626968383789
+          ],
+          "data": {
+            "name": "get burger",
+            "color": "standard",
+            "steps": [
+              "61c47100b97af89de2ca33cd",
+              "61c47203b97af89de2ca351e"
+            ]
+          }
+        },
+        "61c47203b97af89de2ca351e": {
+          "nodeID": "61c47203b97af89de2ca351e",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "nt1y3d7n",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "jfag3awb",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "gp1x3dnn",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": "Sorry, you can say beef burger, chicken burger or vegetable burger?"
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c47203b97af89de2ca3522"
+              },
+              {
+                "type": "",
+                "target": "61c4721fb97af89de2ca3593",
+                "id": "61c47203b97af89de2ca351f"
+              },
+              {
+                "type": "",
+                "target": "61c47277b97af89de2ca3609",
+                "id": "61c47203b97af89de2ca3520",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        958.7747650146484,
+                        353.8769578933716
+                      ]
+                    },
+                    {
+                      "point": [
+                        1015.6406631469727,
+                        353.8769578933716
+                      ]
+                    },
+                    {
+                      "point": [
+                        1015.6406631469727,
+                        286.0149660110473
+                      ]
+                    },
+                    {
+                      "point": [
+                        1072.5065612792969,
+                        286.0149660110473
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "61c4727cb97af89de2ca3618",
+                "id": "61c47203b97af89de2ca3521"
+              }
+            ]
+          }
+        },
+        "61c4721fb97af89de2ca3590": {
+          "nodeID": "61c4721fb97af89de2ca3590",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Please enter the quantity for beef burger. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c47232b97af89de2ca35fc",
+                "id": "61c4721fb97af89de2ca3591"
+              }
+            ]
+          }
+        },
+        "61c4721fb97af89de2ca3593": {
+          "nodeID": "61c4721fb97af89de2ca3593",
+          "type": "block",
+          "coords": [
+            1230,
+            5.016269683837891
+          ],
+          "data": {
+            "name": "get quantity copy",
+            "color": "standard",
+            "steps": [
+              "61c4721fb97af89de2ca3590",
+              "61c47232b97af89de2ca35fc"
+            ]
+          }
+        },
+        "61c47232b97af89de2ca35fc": {
+          "nodeID": "61c47232b97af89de2ca35fc",
+          "type": "capture",
+          "data": {
+            "slot": "VF.NUMBER",
+            "chips": null,
+            "variable": "beef_burger",
+            "slotInputs": [],
+            "noReply": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c47232b97af89de2ca35fd"
+              }
+            ]
+          }
+        },
+        "61c47277b97af89de2ca360e": {
+          "nodeID": "61c47277b97af89de2ca360e",
+          "type": "capture",
+          "data": {
+            "slot": "VF.NUMBER",
+            "chips": null,
+            "variable": "chicken_burger",
+            "slotInputs": [],
+            "noReply": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c47277b97af89de2ca360f"
+              }
+            ]
+          }
+        },
+        "61c47277b97af89de2ca360b": {
+          "nodeID": "61c47277b97af89de2ca360b",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Please enter the quantity for chicken burger. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c47277b97af89de2ca360e",
+                "id": "61c47277b97af89de2ca360c"
+              }
+            ]
+          }
+        },
+        "61c47277b97af89de2ca3609": {
+          "nodeID": "61c47277b97af89de2ca3609",
+          "type": "block",
+          "coords": [
+            1237.5,
+            255.0162696838379
+          ],
+          "data": {
+            "name": "get quantity",
+            "color": "standard",
+            "steps": [
+              "61c47277b97af89de2ca360b",
+              "61c47277b97af89de2ca360e"
+            ]
+          }
+        },
+        "61c4727cb97af89de2ca361d": {
+          "nodeID": "61c4727cb97af89de2ca361d",
+          "type": "capture",
+          "data": {
+            "slot": "VF.NUMBER",
+            "chips": null,
+            "variable": "vegetable_burger",
+            "slotInputs": [],
+            "noReply": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c4727cb97af89de2ca361e"
+              }
+            ]
+          }
+        },
+        "61c4727cb97af89de2ca361a": {
+          "nodeID": "61c4727cb97af89de2ca361a",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Please enter the quantity for vegetable burger. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c4727cb97af89de2ca361d",
+                "id": "61c4727cb97af89de2ca361b"
+              }
+            ]
+          }
+        },
+        "61c4727cb97af89de2ca3618": {
+          "nodeID": "61c4727cb97af89de2ca3618",
+          "type": "block",
+          "coords": [
+            1218.75,
+            482.5162696838379
+          ],
+          "data": {
+            "name": "get quantity",
+            "color": "standard",
+            "steps": [
+              "61c4727cb97af89de2ca361a",
+              "61c4727cb97af89de2ca361d"
+            ]
+          }
+        }
+      },
+      "children": [],
+      "variables": [],
+      "intentStepIDs": [],
+      "versionID": "61bdea74704ad60007b8ce06",
+      "creatorID": 78782
+    },
+    "61c47357975c6f001b4d46bb": {
+      "_id": "61c47357975c6f001b4d46bb",
+      "name": "get drink",
+      "type": "COMPONENT",
+      "zoom": 80,
+      "offsetX": 272,
+      "offsetY": 104,
+      "modified": 1640267022,
+      "nodes": {
+        "61c47358b97af89de2ca368b": {
+          "nodeID": "61c47358b97af89de2ca368b",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c47367b97af89de2ca36df",
+                "id": "61c47358b97af89de2ca368c"
+              }
+            ]
+          }
+        },
+        "61c47367b97af89de2ca36dc": {
+          "nodeID": "61c47367b97af89de2ca36dc",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Which type of drink do you like, coke or fanta?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c47390b97af89de2ca37b0",
+                "id": "61c47367b97af89de2ca36dd"
+              }
+            ]
+          }
+        },
+        "61c47367b97af89de2ca36df": {
+          "nodeID": "61c47367b97af89de2ca36df",
+          "type": "block",
+          "coords": [
+            766.25,
+            135.0162696838379
+          ],
+          "data": {
+            "name": "get drink copy",
+            "color": "standard",
+            "steps": [
+              "61c47367b97af89de2ca36dc",
+              "61c47390b97af89de2ca37b0"
+            ]
+          }
+        },
+        "61c47383b97af89de2ca37a6": {
+          "nodeID": "61c47383b97af89de2ca37a6",
+          "type": "capture",
+          "data": {
+            "slot": "VF.NUMBER",
+            "chips": null,
+            "variable": "coke",
+            "slotInputs": [],
+            "noReply": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c47383b97af89de2ca37a7"
+              }
+            ]
+          }
+        },
+        "61c47383b97af89de2ca37a3": {
+          "nodeID": "61c47383b97af89de2ca37a3",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Please enter the quantity for coke. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c47383b97af89de2ca37a6",
+                "id": "61c47383b97af89de2ca37a4"
+              }
+            ]
+          }
+        },
+        "61c47383b97af89de2ca37a1": {
+          "nodeID": "61c47383b97af89de2ca37a1",
+          "type": "block",
+          "coords": [
+            1206.25,
+            62.51626968383789
+          ],
+          "data": {
+            "name": "get quantity",
+            "color": "standard",
+            "steps": [
+              "61c47383b97af89de2ca37a3",
+              "61c47383b97af89de2ca37a6"
+            ]
+          }
+        },
+        "61c47390b97af89de2ca37b0": {
+          "nodeID": "61c47390b97af89de2ca37b0",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "99do3drj",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "dtdt3d1m",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": "Sorry, you can say coke or fanta. "
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c47390b97af89de2ca37b4"
+              },
+              {
+                "type": "",
+                "target": "61c47383b97af89de2ca37a1",
+                "id": "61c47390b97af89de2ca37b3"
+              },
+              {
+                "type": "",
+                "target": "61c4740bb97af89de2ca37bd",
+                "id": "61c473bbb97af89de2ca37b8"
+              }
+            ]
+          }
+        },
+        "61c4740bb97af89de2ca37c2": {
+          "nodeID": "61c4740bb97af89de2ca37c2",
+          "type": "capture",
+          "data": {
+            "slot": "VF.NUMBER",
+            "chips": null,
+            "variable": "fanta",
+            "slotInputs": [],
+            "noReply": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c4740bb97af89de2ca37c3"
+              }
+            ]
+          }
+        },
+        "61c4740bb97af89de2ca37bf": {
+          "nodeID": "61c4740bb97af89de2ca37bf",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Please enter the quantity for fanta. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c4740bb97af89de2ca37c2",
+                "id": "61c4740bb97af89de2ca37c0"
+              }
+            ]
+          }
+        },
+        "61c4740bb97af89de2ca37bd": {
+          "nodeID": "61c4740bb97af89de2ca37bd",
+          "type": "block",
+          "coords": [
+            1207.5,
+            365.0162696838379
+          ],
+          "data": {
+            "name": "get quantity",
+            "color": "standard",
+            "steps": [
+              "61c4740bb97af89de2ca37bf",
+              "61c4740bb97af89de2ca37c2"
+            ]
+          }
+        }
+      },
+      "children": [],
+      "variables": [],
+      "intentStepIDs": [],
+      "versionID": "61bdea74704ad60007b8ce06",
+      "creatorID": 78782
+    },
+    "61c475a4b2e7c0001c71696a": {
+      "_id": "61c475a4b2e7c0001c71696a",
+      "name": "get chips",
+      "type": "COMPONENT",
+      "zoom": 80,
+      "offsetX": 272,
+      "offsetY": 104,
+      "modified": 1640265155,
+      "nodes": {
+        "61c475a5b97af89de2ca382b": {
+          "nodeID": "61c475a5b97af89de2ca382b",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c475bab97af89de2ca387a",
+                "id": "61c475a6b97af89de2ca382c",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        525.0247650146484,
+                        200.68357706069946
+                      ]
+                    },
+                    {
+                      "point": [
+                        571.265625,
+                        200.68357706069946
+                      ]
+                    },
+                    {
+                      "point": [
+                        571.265625,
+                        139.76494455337524
+                      ]
+                    },
+                    {
+                      "point": [
+                        617.5064849853516,
+                        139.76494455337524
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c475bab97af89de2ca3882": {
+          "nodeID": "61c475bab97af89de2ca3882",
+          "type": "capture",
+          "data": {
+            "slot": "VF.NUMBER",
+            "chips": null,
+            "variable": "chips",
+            "slotInputs": [],
+            "noReply": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c475bab97af89de2ca3883"
+              }
+            ]
+          }
+        },
+        "61c475bab97af89de2ca387f": {
+          "nodeID": "61c475bab97af89de2ca387f",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Please enter the quantity for chips. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c475bab97af89de2ca3882",
+                "id": "61c475bab97af89de2ca3880"
+              }
+            ]
+          }
+        },
+        "61c475bab97af89de2ca387a": {
+          "nodeID": "61c475bab97af89de2ca387a",
+          "type": "block",
+          "coords": [
+            782.5,
+            108.76626968383789
+          ],
+          "data": {
+            "name": "get chips",
+            "color": "standard",
+            "steps": [
+              "61c475bab97af89de2ca387f",
+              "61c475bab97af89de2ca3882"
+            ]
+          }
+        }
+      },
+      "children": [],
+      "variables": [],
+      "intentStepIDs": [],
+      "versionID": "61bdea74704ad60007b8ce06",
+      "creatorID": 78782
+    },
+    "61c4761f9e224f001b1a4e48": {
+      "_id": "61c4761f9e224f001b1a4e48",
+      "name": "print order",
+      "type": "COMPONENT",
+      "zoom": 80,
+      "offsetX": 272,
+      "offsetY": 104,
+      "modified": 1640275048,
+      "nodes": {
+        "61c47620b97af89de2ca38e0": {
+          "nodeID": "61c47620b97af89de2ca38e0",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c47649b97af89de2ca3936",
+                "id": "61c47621b97af89de2ca38e1"
+              }
+            ]
+          }
+        },
+        "61c47649b97af89de2ca3933": {
+          "nodeID": "61c47649b97af89de2ca3933",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "You have ordered: {{[beef_burger].beef_burger}} Beef Burger, {{[chicken_burger].chicken_burger}} Chicken Burger, {{[vegetable_burger].vegetable_burger}} Vegetable Burger, {{[chips].chips}} chips, {{[coke].coke}} coke, {{[fanta].fanta}} fanta. Status: {{[status].status}}. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c47649b97af89de2ca3935"
+              }
+            ]
+          }
+        },
+        "61c47649b97af89de2ca3936": {
+          "nodeID": "61c47649b97af89de2ca3936",
+          "type": "block",
+          "coords": [
+            741.25,
+            101.26626968383789
+          ],
+          "data": {
+            "name": "print order",
+            "color": "standard",
+            "steps": [
+              "61c47649b97af89de2ca3933"
+            ]
+          }
+        }
+      },
+      "children": [],
+      "variables": [],
+      "intentStepIDs": [],
+      "versionID": "61bdea74704ad60007b8ce06",
+      "creatorID": 78782
+    },
+    "61c48e06975c6f001b4d46d6": {
+      "_id": "61c48e06975c6f001b4d46d6",
+      "name": "check order",
+      "type": "COMPONENT",
+      "zoom": 81.49999999999996,
+      "offsetX": 272,
+      "offsetY": 104,
+      "modified": 1640272453,
+      "nodes": {
+        "61c48e07b97af89de2ca3dba": {
+          "nodeID": "61c48e07b97af89de2ca3dba",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c48e3bb97af89de2ca3e19",
+                "id": "61c48e08b97af89de2ca3dbb",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        525.0248052678525,
+                        200.6835834334678
+                      ]
+                    },
+                    {
+                      "point": [
+                        560.6406357653602,
+                        200.6835834334678
+                      ]
+                    },
+                    {
+                      "point": [
+                        560.6406357653602,
+                        83.51496239363833
+                      ]
+                    },
+                    {
+                      "point": [
+                        596.2564662628679,
+                        83.51496239363833
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c48e3bb97af89de2ca3e19": {
+          "nodeID": "61c48e3bb97af89de2ca3e19",
+          "type": "block",
+          "coords": [
+            761.25,
+            52.51626968383789
+          ],
+          "data": {
+            "name": "check order",
+            "color": "standard",
+            "steps": [
+              "61c48f60b97af89de2ca3e2a"
+            ]
+          }
+        },
+        "61c48f60b97af89de2ca3e2a": {
+          "nodeID": "61c48f60b97af89de2ca3e2a",
+          "type": "google_sheets",
+          "data": {
+            "user": {
+              "created_at": "2021-12-22T23:07:20.514Z",
+              "creator_id": 78782,
+              "project_id": null,
+              "platform": "Google Sheets",
+              "user_id": "106455312214053924915",
+              "user_data": {
+                "email": "lekang0522@gmail.com",
+                "name": "Lekang Jiang"
+              },
+              "integration_user_id": "gs_int_106455312214053924915",
+              "requires_refresh": null
+            },
+            "sheet": {
+              "value": 0,
+              "label": "order"
+            },
+            "endRow": "",
+            "mapping": [
+              {
+                "arg1": {
+                  "value": 0,
+                  "label": "Customer (0)"
+                },
+                "arg2": "name"
+              },
+              {
+                "arg1": {
+                  "value": 1,
+                  "label": "Beef Burger (1)"
+                },
+                "arg2": "beef_burger"
+              },
+              {
+                "arg1": {
+                  "value": 2,
+                  "label": "Chicken Burger (2)"
+                },
+                "arg2": "chicken_burger"
+              },
+              {
+                "arg1": {
+                  "value": 3,
+                  "label": "Vegetable Burger (3)"
+                },
+                "arg2": "vegetable_burger"
+              },
+              {
+                "arg1": {
+                  "value": 4,
+                  "label": "Chips (4)"
+                },
+                "arg2": "chips"
+              },
+              {
+                "arg1": {
+                  "value": 5,
+                  "label": "Coke (5)"
+                },
+                "arg2": "coke"
+              },
+              {
+                "arg1": {
+                  "value": 6,
+                  "label": "Fanta (6)"
+                },
+                "arg2": "fanta"
+              },
+              {
+                "arg1": {
+                  "value": 7,
+                  "label": "Allergy (7)"
+                },
+                "arg2": "allergy"
+              },
+              {
+                "arg1": {
+                  "value": 8,
+                  "label": "Status (8)"
+                },
+                "arg2": "status"
+              }
+            ],
+            "startRow": "",
+            "rowNumber": "",
+            "rowValues": [],
+            "matchValue": "{{[name].name}}",
+            "spreadsheet": {
+              "value": "1qhWCIbfWGYU6ZV0YN2PPfUth_FJaVRWDZ0K_pWRmSeU",
+              "label": "Burger Box Order"
+            },
+            "headerColumn": {
+              "value": 0,
+              "label": "Customer (0)"
+            },
+            "selectedAction": "Retrieve Data",
+            "selectedIntegration": "Google Sheets",
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c490d3b97af89de2ca3e5a",
+                "id": "61c48f60b97af89de2ca3e2d",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        926.274715400138,
+                        273.61655110505524
+                      ]
+                    },
+                    {
+                      "point": [
+                        987.7585182423543,
+                        273.61655110505524
+                      ]
+                    },
+                    {
+                      "point": [
+                        987.7585182423543,
+                        225.544351383046
+                      ]
+                    },
+                    {
+                      "point": [
+                        1049.2423210845707,
+                        225.544351383046
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "fail",
+                "target": "61c48fa6b97af89de2ca3e36",
+                "id": "61c48f60b97af89de2ca3e2e",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        596.274715400138,
+                        243.14780110505524
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        572.274715400138,
+                        243.14780110505524
+                      ]
+                    },
+                    {
+                      "point": [
+                        572.274715400138,
+                        384.10232205022396
+                      ]
+                    },
+                    {
+                      "point": [
+                        743.0816196371013,
+                        384.10232205022396
+                      ]
+                    },
+                    {
+                      "point": [
+                        743.0816196371013,
+                        408.10232205022396
+                      ],
+                      "toTop": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c48fa6b97af89de2ca3e33": {
+          "nodeID": "61c48fa6b97af89de2ca3e33",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Sorry, we do not find the order in our list. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c48fa6b97af89de2ca3e35"
+              }
+            ]
+          }
+        },
+        "61c48fa6b97af89de2ca3e36": {
+          "nodeID": "61c48fa6b97af89de2ca3e36",
+          "type": "block",
+          "coords": [
+            743.0751533742334,
+            409.1036929967211
+          ],
+          "data": {
+            "name": "failure",
+            "color": "standard",
+            "steps": [
+              "61c48fa6b97af89de2ca3e33"
+            ]
+          }
+        },
+        "61c490d3b97af89de2ca3e57": {
+          "nodeID": "61c490d3b97af89de2ca3e57",
+          "type": "flow",
+          "data": {
+            "diagramID": "61c4761f9e224f001b1a4e48",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c490d3b97af89de2ca3e59"
+              }
+            ]
+          }
+        },
+        "61c490d3b97af89de2ca3e5a": {
+          "nodeID": "61c490d3b97af89de2ca3e5a",
+          "type": "block",
+          "coords": [
+            1214.23585060911,
+            194.54565362239987
+          ],
+          "data": {
+            "name": "print order",
+            "color": "standard",
+            "steps": [
+              "61c490eab97af89de2ca3e63",
+              "61c490d3b97af89de2ca3e57"
+            ]
+          }
+        },
+        "61c490eab97af89de2ca3e63": {
+          "nodeID": "61c490eab97af89de2ca3e63",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Great! We find your order in our list! "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c490d3b97af89de2ca3e57",
+                "id": "61c490eab97af89de2ca3e66"
+              }
+            ]
+          }
+        }
+      },
+      "children": [
+        "61c4761f9e224f001b1a4e48"
+      ],
+      "variables": [],
+      "intentStepIDs": [],
+      "versionID": "61bdea74704ad60007b8ce06",
+      "creatorID": 78782
+    },
+    "61c4995f78fd2c001bbf1955": {
+      "_id": "61c4995f78fd2c001bbf1955",
+      "name": "remove",
+      "type": "COMPONENT",
+      "zoom": 80,
+      "offsetX": 272,
+      "offsetY": 104,
+      "modified": 1640275057,
+      "nodes": {
+        "61c49960b97af89de2ca4263": {
+          "nodeID": "61c49960b97af89de2ca4263",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c49995b97af89de2ca426a",
+                "id": "61c4998fb97af89de2ca4264",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        525.0247762657468,
+                        200.6835802199381
+                      ]
+                    },
+                    {
+                      "point": [
+                        552.6198941036755,
+                        200.6835802199381
+                      ]
+                    },
+                    {
+                      "point": [
+                        552.6198941036755,
+                        -11.740697817602289
+                      ]
+                    },
+                    {
+                      "point": [
+                        580.2150119416042,
+                        -11.740697817602289
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c49995b97af89de2ca4267": {
+          "nodeID": "61c49995b97af89de2ca4267",
+          "type": "flow",
+          "data": {
+            "diagramID": "61c4761f9e224f001b1a4e48",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c499a8b97af89de2ca4273",
+                "id": "61c49995b97af89de2ca4269"
+              }
+            ]
+          }
+        },
+        "61c49995b97af89de2ca426a": {
+          "nodeID": "61c49995b97af89de2ca426a",
+          "type": "block",
+          "coords": [
+            745.2085575888055,
+            -42.73938155405229
+          ],
+          "data": {
+            "name": "print",
+            "color": "standard",
+            "steps": [
+              "61c49995b97af89de2ca4267",
+              "61c499a8b97af89de2ca4273",
+              "61c499cbb97af89de2ca427b"
+            ]
+          }
+        },
+        "61c499a8b97af89de2ca4273": {
+          "nodeID": "61c499a8b97af89de2ca4273",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Which item do you want to remove?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c499cbb97af89de2ca427b",
+                "id": "61c499a8b97af89de2ca4276"
+              }
+            ]
+          }
+        },
+        "61c499cbb97af89de2ca427b": {
+          "nodeID": "61c499cbb97af89de2ca427b",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "nt1y3d7n",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "jfag3awb",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "gp1x3dnn",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "majh3dxs",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "99do3drj",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "dtdt3d1m",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": "Sorry, you can say a specific item such as beef burger or chips. "
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c499cbb97af89de2ca427f"
+              },
+              {
+                "type": "",
+                "target": "61c49bc6b97af89de2ca42a2",
+                "id": "61c499cbb97af89de2ca427e"
+              },
+              {
+                "type": "",
+                "target": "61c49ba9b97af89de2ca429a",
+                "id": "61c49b68b97af89de2ca428d"
+              },
+              {
+                "type": "",
+                "target": "61c49bc9b97af89de2ca42ac",
+                "id": "61c49b6cb97af89de2ca428f",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        910.2333496225149,
+                        294.29836993838535
+                      ]
+                    },
+                    {
+                      "point": [
+                        962.9132071208649,
+                        294.29836993838535
+                      ]
+                    },
+                    {
+                      "point": [
+                        962.9132071208649,
+                        280.0084790947364
+                      ]
+                    },
+                    {
+                      "point": [
+                        1015.5930646192148,
+                        280.0084790947364
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "61c49bccb97af89de2ca42b6",
+                "id": "61c49b71b97af89de2ca4291",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        910.2333496225149,
+                        348.7775636514883
+                      ]
+                    },
+                    {
+                      "point": [
+                        970.0176993083649,
+                        348.7775636514883
+                      ]
+                    },
+                    {
+                      "point": [
+                        970.0176993083649,
+                        431.1387414552425
+                      ]
+                    },
+                    {
+                      "point": [
+                        1029.8020489942148,
+                        431.1387414552425
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "61c49bcfb97af89de2ca42c0",
+                "id": "61c49b81b97af89de2ca4293",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        910.2333496225149,
+                        403.25672040842835
+                      ]
+                    },
+                    {
+                      "point": [
+                        968.0800531919089,
+                        403.25672040842835
+                      ]
+                    },
+                    {
+                      "point": [
+                        968.0800531919089,
+                        571.9353535573111
+                      ]
+                    },
+                    {
+                      "point": [
+                        1025.9267567613028,
+                        571.9353535573111
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "61c49c4db97af89de2ca42db",
+                "id": "61c49b85b97af89de2ca4295"
+              }
+            ]
+          }
+        },
+        "61c49ba9b97af89de2ca4297": {
+          "nodeID": "61c49ba9b97af89de2ca4297",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "value",
+                "variable": "chicken_burger",
+                "expression": "0"
+              }
+            ],
+            "title": "remove chicken burger",
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c49ba9b97af89de2ca4299"
+              }
+            ]
+          }
+        },
+        "61c49ba9b97af89de2ca429a": {
+          "nodeID": "61c49ba9b97af89de2ca429a",
+          "type": "block",
+          "coords": [
+            1167.7125941872978,
+            100.50604363432222
+          ],
+          "data": {
+            "name": "remove",
+            "color": "standard",
+            "steps": [
+              "61c49ba9b97af89de2ca4297"
+            ]
+          }
+        },
+        "61c49bc6b97af89de2ca42a4": {
+          "nodeID": "61c49bc6b97af89de2ca42a4",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "value",
+                "variable": "beef_burger",
+                "expression": "0"
+              }
+            ],
+            "title": "remove beef burger",
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c49bc6b97af89de2ca42a5"
+              }
+            ]
+          }
+        },
+        "61c49bc6b97af89de2ca42a2": {
+          "nodeID": "61c49bc6b97af89de2ca42a2",
+          "type": "block",
+          "coords": [
+            1161.2109795478998,
+            -29.999876710134195
+          ],
+          "data": {
+            "name": "remove",
+            "color": "standard",
+            "steps": [
+              "61c49bc6b97af89de2ca42a4"
+            ]
+          }
+        },
+        "61c49bc9b97af89de2ca42ae": {
+          "nodeID": "61c49bc9b97af89de2ca42ae",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "value",
+                "variable": "vegetable_burger",
+                "expression": "0"
+              }
+            ],
+            "title": "remove vegetable burger",
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c49bc9b97af89de2ca42af"
+              }
+            ]
+          }
+        },
+        "61c49bc9b97af89de2ca42ac": {
+          "nodeID": "61c49bc9b97af89de2ca42ac",
+          "type": "block",
+          "coords": [
+            1180.586652314316,
+            249.00981112624908
+          ],
+          "data": {
+            "name": "remove",
+            "color": "standard",
+            "steps": [
+              "61c49bc9b97af89de2ca42ae"
+            ]
+          }
+        },
+        "61c49bccb97af89de2ca42b8": {
+          "nodeID": "61c49bccb97af89de2ca42b8",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "value",
+                "variable": "chips",
+                "expression": "0"
+              }
+            ],
+            "title": "remove chips",
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c49bccb97af89de2ca42b9"
+              }
+            ]
+          }
+        },
+        "61c49bccb97af89de2ca42b6": {
+          "nodeID": "61c49bccb97af89de2ca42b6",
+          "type": "block",
+          "coords": [
+            1194.7954790096899,
+            400.14005870428997
+          ],
+          "data": {
+            "name": "remove",
+            "color": "standard",
+            "steps": [
+              "61c49bccb97af89de2ca42b8"
+            ]
+          }
+        },
+        "61c49bcfb97af89de2ca42c2": {
+          "nodeID": "61c49bcfb97af89de2ca42c2",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "value",
+                "variable": "coke",
+                "expression": "0"
+              }
+            ],
+            "title": "remove coke",
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c49bcfb97af89de2ca42c3"
+              }
+            ]
+          }
+        },
+        "61c49bcfb97af89de2ca42c0": {
+          "nodeID": "61c49bcfb97af89de2ca42c0",
+          "type": "block",
+          "coords": [
+            1190.920344456405,
+            540.9366141402431
+          ],
+          "data": {
+            "name": "remove",
+            "color": "standard",
+            "steps": [
+              "61c49bcfb97af89de2ca42c2"
+            ]
+          }
+        },
+        "61c49c1eb97af89de2ca42cc": {
+          "nodeID": "61c49c1eb97af89de2ca42cc",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "value",
+                "variable": "fanta",
+                "expression": "0"
+              }
+            ],
+            "title": "remove fanta",
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c49c1eb97af89de2ca42cd"
+              }
+            ]
+          }
+        },
+        "61c49c4db97af89de2ca42db": {
+          "nodeID": "61c49c4db97af89de2ca42db",
+          "type": "block",
+          "coords": [
+            1197.4219590957996,
+            685.6513611800711
+          ],
+          "data": {
+            "name": "remove",
+            "color": "standard",
+            "steps": [
+              "61c49c1eb97af89de2ca42cc"
+            ]
+          }
+        }
+      },
+      "children": [
+        "61c4761f9e224f001b1a4e48"
+      ],
       "variables": [],
       "intentStepIDs": [],
       "versionID": "61bdea74704ad60007b8ce06",
