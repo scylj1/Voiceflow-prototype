@@ -1,0 +1,2358 @@
+{
+  "_version": "1",
+  "project": {
+    "_id": "61bdea74b2e7c0001c7163be",
+    "name": "CW2",
+    "teamID": "ewjWeYBEbR",
+    "devVersion": "61bdea74704ad60007b8ce06",
+    "platform": "general",
+    "platformData": {
+      "invocationName": "template project general"
+    },
+    "members": [],
+    "linkType": "STRAIGHT",
+    "image": "",
+    "_version": 1,
+    "creatorID": 78782,
+    "createdAt": "2021-12-18T14:04:36.000Z"
+  },
+  "version": {
+    "_id": "61bdea74704ad60007b8ce06",
+    "name": "Initial Version",
+    "projectID": "61bdea74b2e7c0001c7163be",
+    "variables": [
+      "name",
+      "quantity",
+      "allergy"
+    ],
+    "platformData": {
+      "slots": [
+        {
+          "key": "srb43awp",
+          "name": "burger_type",
+          "type": {
+            "value": "Custom"
+          },
+          "color": "#457A53",
+          "inputs": [
+            "chicken burger",
+            "beef burger",
+            "vegetable burger"
+          ]
+        },
+        {
+          "key": "qcoy3az6",
+          "name": "drink",
+          "type": {
+            "value": "Custom"
+          },
+          "color": "#4F9ED1",
+          "inputs": [
+            "drink"
+          ]
+        },
+        {
+          "key": "mnp23abw",
+          "name": "item",
+          "type": {
+            "value": "Custom"
+          },
+          "color": "#3A5999",
+          "inputs": [
+            "burger",
+            "chips",
+            "drink"
+          ]
+        },
+        {
+          "key": "0wr03a4q",
+          "name": "drink_type",
+          "type": {
+            "value": "Custom"
+          },
+          "color": "#BF395B",
+          "inputs": [
+            "coke",
+            "fanta",
+            "7Up"
+          ]
+        }
+      ],
+      "intents": [
+        {
+          "key": "VF.HELP",
+          "name": "VF.HELP",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "VF.STOP",
+          "name": "VF.STOP",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "VF.YES",
+          "name": "VF.YES",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "b58w3ae2",
+          "name": "order",
+          "inputs": [
+            {
+              "text": "make order",
+              "slots": []
+            }
+          ],
+          "slots": []
+        },
+        {
+          "key": "ul9m3a4x",
+          "name": "cancel_order",
+          "inputs": [
+            {
+              "text": "cancel order",
+              "slots": []
+            }
+          ],
+          "slots": []
+        },
+        {
+          "key": "jfag3awb",
+          "name": "chicken_burger",
+          "inputs": [
+            {
+              "text": "",
+              "slots": []
+            }
+          ],
+          "slots": []
+        },
+        {
+          "key": "g6b03aq0",
+          "name": "get_burger",
+          "inputs": [
+            {
+              "text": "{{[burger_type].srb43awp}} ",
+              "slots": [
+                "srb43awp"
+              ]
+            }
+          ],
+          "slots": [
+            {
+              "id": "srb43awp",
+              "dialog": {
+                "prompt": [],
+                "confirm": [],
+                "utterances": [],
+                "confirmEnabled": false
+              },
+              "required": false
+            }
+          ]
+        },
+        {
+          "key": "VF.NO",
+          "name": "VF.NO",
+          "inputs": [],
+          "slots": []
+        },
+        {
+          "key": "skos3afm",
+          "name": "get_item",
+          "inputs": [
+            {
+              "text": "{{[item].mnp23abw}} ",
+              "slots": [
+                "mnp23abw"
+              ]
+            }
+          ],
+          "slots": [
+            {
+              "id": "mnp23abw",
+              "dialog": {
+                "prompt": [],
+                "confirm": [],
+                "utterances": [],
+                "confirmEnabled": false
+              },
+              "required": false
+            }
+          ]
+        },
+        {
+          "key": "fkqw3a2o",
+          "name": "get_drink",
+          "inputs": [
+            {
+              "text": "{{[drink_type].0wr03a4q}} ",
+              "slots": [
+                "0wr03a4q"
+              ]
+            }
+          ],
+          "slots": [
+            {
+              "id": "0wr03a4q",
+              "dialog": {
+                "prompt": [],
+                "confirm": [],
+                "utterances": [],
+                "confirmEnabled": false
+              },
+              "required": false
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "restart": true,
+        "repeat": 100,
+        "locales": [
+          "en-US"
+        ],
+        "defaultVoice": "Alexa"
+      },
+      "publishing": {},
+      "platform": "general"
+    },
+    "rootDiagramID": "61bdea74704ad60007b8ce07",
+    "creatorID": 78782,
+    "prototype": {
+      "data": {
+        "name": "CW2",
+        "locales": [
+          "en-US"
+        ]
+      },
+      "model": {
+        "intents": [
+          {
+            "key": "VF.HELP",
+            "name": "VF.HELP",
+            "inputs": [
+              {
+                "text": "help"
+              },
+              {
+                "text": "help me"
+              },
+              {
+                "text": "i need help"
+              }
+            ],
+            "slots": []
+          },
+          {
+            "key": "VF.STOP",
+            "name": "VF.STOP",
+            "inputs": [
+              {
+                "text": "stop"
+              }
+            ],
+            "slots": []
+          },
+          {
+            "key": "VF.YES",
+            "name": "VF.YES",
+            "inputs": [
+              {
+                "text": "yes"
+              },
+              {
+                "text": "yea"
+              },
+              {
+                "text": "ok"
+              },
+              {
+                "text": "okay"
+              },
+              {
+                "text": "yup"
+              },
+              {
+                "text": "ya"
+              },
+              {
+                "text": "sure"
+              }
+            ],
+            "slots": []
+          },
+          {
+            "key": "b58w3ae2",
+            "name": "order",
+            "inputs": [
+              {
+                "text": "make order",
+                "slots": []
+              }
+            ],
+            "slots": []
+          },
+          {
+            "key": "g6b03aq0",
+            "name": "get_burger",
+            "inputs": [
+              {
+                "text": "{{[burger_type].srb43awp}}",
+                "slots": [
+                  "srb43awp"
+                ]
+              }
+            ],
+            "slots": [
+              {
+                "id": "srb43awp",
+                "dialog": {
+                  "prompt": [],
+                  "confirm": [],
+                  "utterances": [],
+                  "confirmEnabled": false
+                },
+                "required": false
+              }
+            ]
+          },
+          {
+            "key": "VF.NO",
+            "name": "VF.NO",
+            "inputs": [
+              {
+                "text": "no"
+              },
+              {
+                "text": "nope"
+              },
+              {
+                "text": "nay"
+              },
+              {
+                "text": "nah"
+              },
+              {
+                "text": "no way"
+              },
+              {
+                "text": "negative"
+              }
+            ],
+            "slots": []
+          }
+        ],
+        "slots": [
+          {
+            "key": "srb43awp",
+            "name": "burger_type",
+            "type": {
+              "value": "Custom"
+            },
+            "color": "#457A53",
+            "inputs": [
+              "chicken",
+              "beef",
+              "vegetable"
+            ]
+          }
+        ]
+      },
+      "context": {
+        "stack": [
+          {
+            "storage": {},
+            "variables": {},
+            "programID": "61bdea74704ad60007b8ce07"
+          }
+        ]
+      },
+      "settings": {},
+      "platform": "general"
+    }
+  },
+  "diagrams": {
+    "61bdea74704ad60007b8ce07": {
+      "_id": "61bdea74704ad60007b8ce07",
+      "offsetX": -405.8646795040881,
+      "offsetY": 486.35373252439985,
+      "zoom": 65.91666666666676,
+      "nodes": {
+        "start00000000000000000000": {
+          "nodeID": "start00000000000000000000",
+          "type": "start",
+          "coords": [
+            1207.33084938011,
+            -357.9421656554998
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "label": "Project starts here",
+            "steps": [
+              "61c318633dec051bd847609c",
+              "61c324c23dec051bd847617e"
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c23bafd0ce6c27f9399291",
+                "id": "60b7e7cad4b17f0ce7bddf11",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1372.355540316947,
+                        -277.25857618250916
+                      ]
+                    },
+                    {
+                      "point": [
+                        1467.8143492158729,
+                        -277.25857618250916
+                      ]
+                    },
+                    {
+                      "point": [
+                        1467.8143492158729,
+                        -352.9948089400776
+                      ]
+                    },
+                    {
+                      "point": [
+                        1563.2731581147987,
+                        -352.9948089400776
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c23bafd0ce6c27f9399291": {
+          "nodeID": "61c23bafd0ce6c27f9399291",
+          "type": "block",
+          "coords": [
+            1728.266673129447,
+            -383.9934695045001
+          ],
+          "data": {
+            "name": "Welcome",
+            "color": "standard",
+            "steps": [
+              "61c323763dec051bd84760c8",
+              "61c23c23d0ce6c27f93992a2",
+              "61c33c8d3dec051bd8476377"
+            ]
+          }
+        },
+        "61c23c23d0ce6c27f93992a2": {
+          "nodeID": "61c23c23d0ce6c27f93992a2",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Hi {{[name].name}}! Do you want to make an order now?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c33c8d3dec051bd8476377",
+                "id": "61c23c23d0ce6c27f93992a5"
+              }
+            ]
+          }
+        },
+        "61c318633dec051bd847609c": {
+          "nodeID": "61c318633dec051bd847609c",
+          "type": "command",
+          "data": {
+            "name": "help",
+            "next": null,
+            "ports": [],
+            "intent": "VF.HELP",
+            "mappings": [],
+            "diagramID": "61c317da37a2d7001b381f0b"
+          }
+        },
+        "61c323763dec051bd84760c8": {
+          "nodeID": "61c323763dec051bd84760c8",
+          "type": "flow",
+          "data": {
+            "diagramID": "61c3237cb2e7c0001c716872",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c23c23d0ce6c27f93992a2",
+                "id": "61c323763dec051bd84760cb"
+              }
+            ]
+          }
+        },
+        "61c324c23dec051bd847617e": {
+          "nodeID": "61c324c23dec051bd847617e",
+          "type": "command",
+          "data": {
+            "name": "stop",
+            "next": null,
+            "ports": [],
+            "intent": "VF.STOP",
+            "mappings": [],
+            "diagramID": "61c32424b2e7c0001c716874"
+          }
+        },
+        "61c33c8d3dec051bd8476377": {
+          "nodeID": "61c33c8d3dec051bd8476377",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "VF.YES",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": ""
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c33c8d3dec051bd847637b"
+              },
+              {
+                "type": "",
+                "target": "61c33cb63dec051bd8476382",
+                "id": "61c33c8d3dec051bd847637a"
+              }
+            ]
+          }
+        },
+        "61c33cb63dec051bd847637f": {
+          "nodeID": "61c33cb63dec051bd847637f",
+          "type": "flow",
+          "data": {
+            "diagramID": "61c323fd975c6f001b4d45bb",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c3534a3dec051bd84764ec",
+                "id": "61c33cb63dec051bd8476381"
+              }
+            ]
+          }
+        },
+        "61c33cb63dec051bd8476382": {
+          "nodeID": "61c33cb63dec051bd8476382",
+          "type": "block",
+          "coords": [
+            2158.41829445959,
+            -225.46538091083136
+          ],
+          "data": {
+            "name": "order",
+            "color": "standard",
+            "steps": [
+              "61c33cb63dec051bd847637f"
+            ]
+          }
+        },
+        "61c3534a3dec051bd84764e9": {
+          "nodeID": "61c3534a3dec051bd84764e9",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Order confirmed. Thanks for visiting Burger Box. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c3534a3dec051bd84764eb"
+              }
+            ]
+          }
+        },
+        "61c3534a3dec051bd84764ec": {
+          "nodeID": "61c3534a3dec051bd84764ec",
+          "type": "block",
+          "coords": [
+            2103.41829445959,
+            69.55088877300653
+          ],
+          "data": {
+            "name": "Finished",
+            "color": "standard",
+            "steps": [
+              "61c3534a3dec051bd84764e9"
+            ]
+          }
+        }
+      },
+      "variables": [],
+      "children": [
+        "61c317da37a2d7001b381f0b",
+        "61c3237cb2e7c0001c716872",
+        "61c32424b2e7c0001c716874",
+        "61c323fd975c6f001b4d45bb"
+      ],
+      "name": "ROOT",
+      "versionID": "61bdea74704ad60007b8ce06",
+      "creatorID": 78782,
+      "modified": 1640203841,
+      "intentStepIDs": [
+        "61c32ffb3dec051bd8476352",
+        "61c33c383dec051bd8476363",
+        "61c342253dec051bd847638a"
+      ]
+    },
+    "61c317da37a2d7001b381f0b": {
+      "_id": "61c317da37a2d7001b381f0b",
+      "name": "help",
+      "type": "COMPONENT",
+      "zoom": 80,
+      "offsetX": 272,
+      "offsetY": 104,
+      "modified": 1640193277,
+      "nodes": {
+        "61c317da3dec051bd8476074": {
+          "nodeID": "61c317da3dec051bd8476074",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c329aa3dec051bd84762e0",
+                "id": "61c317db3dec051bd8476075"
+              }
+            ]
+          }
+        },
+        "61c329aa3dec051bd84762dd": {
+          "nodeID": "61c329aa3dec051bd84762dd",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "We are selling different kinds of burgers, chips and drinks. You can make orders, cancel orders and check status. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c357583dec051bd8476536",
+                "id": "61c329aa3dec051bd84762df"
+              }
+            ]
+          }
+        },
+        "61c329aa3dec051bd84762e0": {
+          "nodeID": "61c329aa3dec051bd84762e0",
+          "type": "block",
+          "coords": [
+            811.25,
+            130.0162696838379
+          ],
+          "data": {
+            "name": "instruction",
+            "color": "standard",
+            "steps": [
+              "61c329aa3dec051bd84762dd",
+              "61c357583dec051bd8476536"
+            ]
+          }
+        },
+        "61c357583dec051bd8476536": {
+          "nodeID": "61c357583dec051bd8476536",
+          "type": "prompt",
+          "data": {
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c357583dec051bd8476539"
+              }
+            ],
+            "noReply": null,
+            "noMatches": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": ""
+                }
+              ]
+            },
+            "chips": null,
+            "buttons": null
+          }
+        },
+        "61c3585e3dec051bd8476545": {
+          "nodeID": "61c3585e3dec051bd8476545",
+          "type": "flow",
+          "data": {
+            "diagramID": "61c323fd975c6f001b4d45bb",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c3585e3dec051bd8476547"
+              }
+            ]
+          }
+        },
+        "61c3587d3dec051bd847654f": {
+          "nodeID": "61c3587d3dec051bd847654f",
+          "type": "intent",
+          "data": {
+            "intent": "b58w3ae2",
+            "mappings": [],
+            "availability": "GLOBAL",
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c3585e3dec051bd8476545",
+                "id": "61c3587d3dec051bd8476550"
+              }
+            ]
+          }
+        },
+        "61c3587d3dec051bd8476551": {
+          "nodeID": "61c3587d3dec051bd8476551",
+          "type": "block",
+          "coords": [
+            1252.5,
+            148.78253936767578
+          ],
+          "data": {
+            "name": "make order",
+            "color": "standard",
+            "steps": [
+              "61c3587d3dec051bd847654f",
+              "61c3585e3dec051bd8476545"
+            ]
+          }
+        }
+      },
+      "children": [
+        "61c323fd975c6f001b4d45bb"
+      ],
+      "variables": [],
+      "intentStepIDs": [
+        "61c3582c3dec051bd847653d",
+        "61c3587d3dec051bd847654f"
+      ],
+      "versionID": "61bdea74704ad60007b8ce06",
+      "creatorID": 78782
+    },
+    "61c3237cb2e7c0001c716872": {
+      "_id": "61c3237cb2e7c0001c716872",
+      "name": "Welcome",
+      "type": "COMPONENT",
+      "zoom": 80,
+      "offsetX": -170.7377889048542,
+      "offsetY": -132.49302520823244,
+      "modified": 1640191814,
+      "nodes": {
+        "61c3237c3dec051bd84760ce": {
+          "nodeID": "61c3237c3dec051bd84760ce",
+          "type": "start",
+          "coords": [
+            913.4222361310677,
+            415.6162815102905
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c323843dec051bd84760d2",
+                "id": "61c3237d3dec051bd84760cf",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1078.4469391568848,
+                        496.29987764447634
+                      ]
+                    },
+                    {
+                      "point": [
+                        1160.5912826887939,
+                        496.29987764447634
+                      ]
+                    },
+                    {
+                      "point": [
+                        1160.5912826887939,
+                        349.4759202003479
+                      ]
+                    },
+                    {
+                      "point": [
+                        1242.7356262207031,
+                        349.4759202003479
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c323843dec051bd84760d2": {
+          "nodeID": "61c323843dec051bd84760d2",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Welcome to Burger Box!"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c325b63dec051bd847618a",
+                "id": "61c323843dec051bd84760d4"
+              }
+            ]
+          }
+        },
+        "61c323843dec051bd84760d5": {
+          "nodeID": "61c323843dec051bd84760d5",
+          "type": "block",
+          "coords": [
+            1408.75,
+            270.0162696838379
+          ],
+          "data": {
+            "name": "Welcome",
+            "color": "standard",
+            "steps": [
+              "61c323843dec051bd84760d2",
+              "61c325b63dec051bd847618a",
+              "61c3263a3dec051bd8476192"
+            ]
+          }
+        },
+        "61c325b63dec051bd847618a": {
+          "nodeID": "61c325b63dec051bd847618a",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "advance",
+                "variable": "sessions",
+                "expression": "{{[sessions].sessions}}+1"
+              }
+            ],
+            "title": "user_session",
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c3263a3dec051bd8476192",
+                "id": "61c325b63dec051bd847618d"
+              }
+            ]
+          }
+        },
+        "61c3263a3dec051bd8476192": {
+          "nodeID": "61c3263a3dec051bd8476192",
+          "type": "ifV2",
+          "data": {
+            "expressions": [
+              {
+                "type": null,
+                "name": "",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "sessions"
+                      },
+                      {
+                        "type": "value",
+                        "value": "2"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "noMatch": {
+              "type": "path",
+              "pathName": "No Match"
+            },
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c3263a3dec051bd8476196"
+              },
+              {
+                "type": "",
+                "target": "61c3268d3dec051bd847619b",
+                "id": "61c3263a3dec051bd8476195",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1573.7746887207031,
+                        475.5957245826721
+                      ]
+                    },
+                    {
+                      "point": [
+                        1663.2550811767578,
+                        475.5957245826721
+                      ]
+                    },
+                    {
+                      "point": [
+                        1663.2550811767578,
+                        256.99217081069946
+                      ]
+                    },
+                    {
+                      "point": [
+                        1752.7354736328123,
+                        256.99217081069946
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c3268d3dec051bd847619b": {
+          "nodeID": "61c3268d3dec051bd847619b",
+          "type": "flow",
+          "data": {
+            "diagramID": "61c32696975c6f001b4d45c0",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c3268d3dec051bd847619d"
+              }
+            ]
+          }
+        },
+        "61c3268d3dec051bd847619e": {
+          "nodeID": "61c3268d3dec051bd847619e",
+          "type": "block",
+          "coords": [
+            1918.75,
+            177.53253936767578
+          ],
+          "data": {
+            "name": "account",
+            "color": "standard",
+            "steps": [
+              "61c3268d3dec051bd847619b"
+            ]
+          }
+        }
+      },
+      "children": [
+        "61c32696975c6f001b4d45c0"
+      ],
+      "variables": [],
+      "intentStepIDs": [],
+      "versionID": "61bdea74704ad60007b8ce06",
+      "creatorID": 78782
+    },
+    "61c323fd975c6f001b4d45bb": {
+      "_id": "61c323fd975c6f001b4d45bb",
+      "name": "order",
+      "type": "COMPONENT",
+      "zoom": 58.64279629290107,
+      "offsetX": 241.67858767910585,
+      "offsetY": 300.653240210445,
+      "modified": 1640203836,
+      "nodes": {
+        "61c323fd3dec051bd84760f6": {
+          "nodeID": "61c323fd3dec051bd84760f6",
+          "type": "start",
+          "coords": [
+            397.9017654011177,
+            -125.81655026305629
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c3469e3dec051bd84763a4",
+                "id": "61c323fe3dec051bd84760f7",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        232.92656311188136,
+                        -45.13297523042062
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        208.92656311188136,
+                        -45.13297523042062
+                      ]
+                    },
+                    {
+                      "point": [
+                        208.92656311188136,
+                        53.18463789954397
+                      ]
+                    },
+                    {
+                      "point": [
+                        362.80739732492464,
+                        53.18463789954397
+                      ]
+                    },
+                    {
+                      "point": [
+                        362.80739732492464,
+                        77.18463789954397
+                      ],
+                      "toTop": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c3469e3dec051bd84763a1": {
+          "nodeID": "61c3469e3dec051bd84763a1",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Do you want burger, chips or drink?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c3486b3dec051bd84763b5",
+                "id": "61c3469e3dec051bd84763a3"
+              }
+            ]
+          }
+        },
+        "61c3469e3dec051bd84763a4": {
+          "nodeID": "61c3469e3dec051bd84763a4",
+          "type": "block",
+          "coords": [
+            362.8008724488104,
+            78.18595063144328
+          ],
+          "data": {
+            "name": "Items",
+            "color": "standard",
+            "steps": [
+              "61c376573dec051bd84765c1",
+              "61c3469e3dec051bd84763a1",
+              "61c3486b3dec051bd84763b5"
+            ]
+          }
+        },
+        "61c3486b3dec051bd84763b5": {
+          "nodeID": "61c3486b3dec051bd84763b5",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "skos3afm",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": "Sorry, you can say burger, chips or drink. "
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c3486b3dec051bd84763b9"
+              },
+              {
+                "type": "",
+                "target": "61c37fbf3dec051bd84765de",
+                "id": "61c34aec3dec051bd84763c0",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        527.8256320825059,
+                        518.491968858935
+                      ]
+                    },
+                    {
+                      "point": [
+                        565.302959561873,
+                        518.491968858935
+                      ]
+                    },
+                    {
+                      "point": [
+                        565.302959561873,
+                        122.47160026813896
+                      ]
+                    },
+                    {
+                      "point": [
+                        602.7802870412401,
+                        122.47160026813896
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c34b7e3dec051bd84763c2": {
+          "nodeID": "61c34b7e3dec051bd84763c2",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "You ordered {{[quantity].quantity}}{{[burger_type].burger_type}}. Do you want to add a new product?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c350553dec051bd84763e0",
+                "id": "61c34b7e3dec051bd84763c4"
+              }
+            ]
+          }
+        },
+        "61c34b7e3dec051bd84763c5": {
+          "nodeID": "61c34b7e3dec051bd84763c5",
+          "type": "block",
+          "coords": [
+            2069.9600585716526,
+            185.57245613903342
+          ],
+          "data": {
+            "name": "Confirm",
+            "color": "standard",
+            "steps": [
+              "61c34b7e3dec051bd84763c2",
+              "61c350553dec051bd84763e0"
+            ]
+          }
+        },
+        "61c350553dec051bd84763e0": {
+          "nodeID": "61c350553dec051bd84763e0",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "VF.YES",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "VF.NO",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": "Sorry, you can say yes or no. "
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c350553dec051bd84763e4"
+              },
+              {
+                "type": "",
+                "target": null,
+                "id": "61c350553dec051bd84763e3"
+              },
+              {
+                "type": "",
+                "target": "61c350f83dec051bd84763ee",
+                "id": "61c350ea3dec051bd84763e9",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2234.9847880541774,
+                        428.18312538280173
+                      ]
+                    },
+                    {
+                      "point": [
+                        2346.9211003264127,
+                        428.18312538280173
+                      ]
+                    },
+                    {
+                      "point": [
+                        2346.9211003264127,
+                        603.0697040562545
+                      ],
+                      "toTop": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c350f83dec051bd84763eb": {
+          "nodeID": "61c350f83dec051bd84763eb",
+          "type": "flow",
+          "data": {
+            "diagramID": "61c3245537a2d7001b381f1c",
+            "variableMap": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c350f83dec051bd84763ed"
+              }
+            ]
+          }
+        },
+        "61c350f83dec051bd84763ee": {
+          "nodeID": "61c350f83dec051bd84763ee",
+          "type": "block",
+          "coords": [
+            2346.9146190229503,
+            604.0710489625785
+          ],
+          "data": {
+            "name": "check out",
+            "color": "standard",
+            "steps": [
+              "61c3510e3dec051bd84763f7",
+              "61c350f83dec051bd84763eb"
+            ]
+          }
+        },
+        "61c3510e3dec051bd84763f7": {
+          "nodeID": "61c3510e3dec051bd84763f7",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Proceed to checkout"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c350f83dec051bd84763eb",
+                "id": "61c3510e3dec051bd84763fa"
+              }
+            ]
+          }
+        },
+        "61c376573dec051bd84765c1": {
+          "nodeID": "61c376573dec051bd84765c1",
+          "type": "visual",
+          "data": {
+            "name": "Visuals",
+            "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1640201328529-menu.png",
+            "device": null,
+            "dimensions": {
+              "width": 744,
+              "height": 532
+            },
+            "visualType": "image",
+            "canvasVisibility": "full",
+            "blockColor": "standard",
+            "frameType": "AUTO",
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c3469e3dec051bd84763a1",
+                "id": "61c376573dec051bd84765c4"
+              }
+            ]
+          }
+        },
+        "61c37d0a3dec051bd84765c7": {
+          "nodeID": "61c37d0a3dec051bd84765c7",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Please enter the quantity of the choosen item. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c37da43dec051bd84765d2",
+                "id": "61c37d0a3dec051bd84765c9"
+              }
+            ]
+          }
+        },
+        "61c37d0a3dec051bd84765ca": {
+          "nodeID": "61c37d0a3dec051bd84765ca",
+          "type": "block",
+          "coords": [
+            1631.577721350173,
+            192.42891482905839
+          ],
+          "data": {
+            "name": "get quantity",
+            "color": "standard",
+            "steps": [
+              "61c37d0a3dec051bd84765c7",
+              "61c37da43dec051bd84765d2",
+              "61c385243dec051bd8476636",
+              "61c3854f3dec051bd8476644"
+            ]
+          }
+        },
+        "61c37da43dec051bd84765d2": {
+          "nodeID": "61c37da43dec051bd84765d2",
+          "type": "capture",
+          "data": {
+            "slot": "VF.NUMBER",
+            "chips": null,
+            "variable": "quantity",
+            "slotInputs": [],
+            "noReply": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c385243dec051bd8476636",
+                "id": "61c37da43dec051bd84765d5"
+              }
+            ]
+          }
+        },
+        "61c37fbf3dec051bd84765da": {
+          "nodeID": "61c37fbf3dec051bd84765da",
+          "type": "ifV2",
+          "data": {
+            "expressions": [
+              {
+                "type": "and",
+                "name": "",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "item"
+                      },
+                      {
+                        "type": "value",
+                        "value": "burger"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": null,
+                "name": "",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "item"
+                      },
+                      {
+                        "type": "value",
+                        "value": "chips"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": null,
+                "name": "",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "item"
+                      },
+                      {
+                        "type": "value",
+                        "value": "drink"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "noMatch": {
+              "type": "none",
+              "pathName": "No Match"
+            },
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c37fbf3dec051bd84765dd"
+              },
+              {
+                "type": "",
+                "target": "61c380de3dec051bd84765f7",
+                "id": "61c37fbf3dec051bd84765dc",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        932.7985022839042,
+                        172.15650670578898
+                      ]
+                    },
+                    {
+                      "point": [
+                        967.7263589972297,
+                        172.15650670578898
+                      ]
+                    },
+                    {
+                      "point": [
+                        967.7263589972297,
+                        -171.42633579840324
+                      ]
+                    },
+                    {
+                      "point": [
+                        1002.6542157105551,
+                        -171.42633579840324
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "61c37d0a3dec051bd84765ca",
+                "id": "61c37fe13dec051bd84765e5",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        932.7985022839042,
+                        226.635675058968
+                      ]
+                    },
+                    {
+                      "point": [
+                        1466.5842133161334,
+                        223.4275940483705
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "61c383003dec051bd8476623",
+                "id": "61c380103dec051bd84765ed",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        932.7985217988205,
+                        281.1148125135327
+                      ]
+                    },
+                    {
+                      "point": [
+                        962.397808228816,
+                        281.1148125135327
+                      ]
+                    },
+                    {
+                      "point": [
+                        962.397808228816,
+                        461.52251384285927
+                      ]
+                    },
+                    {
+                      "point": [
+                        991.9970946588114,
+                        461.52251384285927
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c37fbf3dec051bd84765de": {
+          "nodeID": "61c37fbf3dec051bd84765de",
+          "type": "block",
+          "coords": [
+            767.7737119079509,
+            91.47291155650566
+          ],
+          "data": {
+            "name": "identify item",
+            "color": "standard",
+            "steps": [
+              "61c37fbf3dec051bd84765da"
+            ]
+          }
+        },
+        "61c380db3dec051bd84765f1": {
+          "nodeID": "61c380db3dec051bd84765f1",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Which type of burger do you like, beef burger, chicken burger or vegetable burger?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c382233dec051bd847660a",
+                "id": "61c380db3dec051bd84765f4"
+              }
+            ]
+          }
+        },
+        "61c380de3dec051bd84765f7": {
+          "nodeID": "61c380de3dec051bd84765f7",
+          "type": "block",
+          "coords": [
+            1167.6477405965825,
+            -202.42504386540844
+          ],
+          "data": {
+            "name": "get burger",
+            "color": "standard",
+            "steps": [
+              "61c380db3dec051bd84765f1",
+              "61c382233dec051bd847660a"
+            ]
+          }
+        },
+        "61c382233dec051bd847660a": {
+          "nodeID": "61c382233dec051bd847660a",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "g6b03aq0",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": "Sorry, you can say beef burger, chicken burger or vegetable burger?"
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c382233dec051bd847660e"
+              },
+              {
+                "type": "",
+                "target": "61c37d0a3dec051bd84765ca",
+                "id": "61c382233dec051bd847660d",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1332.6723626510209,
+                        -14.293517795987
+                      ]
+                    },
+                    {
+                      "point": [
+                        1399.6282879835776,
+                        -14.293517795987
+                      ]
+                    },
+                    {
+                      "point": [
+                        1399.6282879835776,
+                        223.42761518952847
+                      ]
+                    },
+                    {
+                      "point": [
+                        1466.5842133161343,
+                        223.42761518952847
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c383003dec051bd8476620": {
+          "nodeID": "61c383003dec051bd8476620",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Which type of drink do you like, coke, fanta or 7Up?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c383313dec051bd847662b",
+                "id": "61c383003dec051bd8476622"
+              }
+            ]
+          }
+        },
+        "61c383003dec051bd8476623": {
+          "nodeID": "61c383003dec051bd8476623",
+          "type": "block",
+          "coords": [
+            1156.9906523572404,
+            430.5238746288021
+          ],
+          "data": {
+            "name": "get drink",
+            "color": "standard",
+            "steps": [
+              "61c383003dec051bd8476620",
+              "61c383313dec051bd847662b"
+            ]
+          }
+        },
+        "61c383313dec051bd847662b": {
+          "nodeID": "61c383313dec051bd847662b",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "fkqw3a2o",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": "Sorry, you can say coke, fanta or 7Up. "
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c383313dec051bd847662f"
+              },
+              {
+                "type": "",
+                "target": "61c37d0a3dec051bd84765ca",
+                "id": "61c383313dec051bd847662e",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1322.0154334959389,
+                        596.1553976630105
+                      ]
+                    },
+                    {
+                      "point": [
+                        1394.299771366263,
+                        596.1553976630105
+                      ]
+                    },
+                    {
+                      "point": [
+                        1394.299771366263,
+                        223.4276151895283
+                      ]
+                    },
+                    {
+                      "point": [
+                        1466.5841092365872,
+                        223.4276151895283
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c385243dec051bd8476636": {
+          "nodeID": "61c385243dec051bd8476636",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "List any allergies here. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c3854f3dec051bd8476644",
+                "id": "61c385243dec051bd8476638"
+              }
+            ]
+          }
+        },
+        "61c3854f3dec051bd8476644": {
+          "nodeID": "61c3854f3dec051bd8476644",
+          "type": "capture",
+          "data": {
+            "slot": null,
+            "chips": null,
+            "variable": "allergy",
+            "slotInputs": [],
+            "noReply": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c34b7e3dec051bd84763c5",
+                "id": "61c3854f3dec051bd8476647",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1796.6025326383467,
+                        482.95624552538413
+                      ]
+                    },
+                    {
+                      "point": [
+                        1850.7844809180383,
+                        482.95624552538413
+                      ]
+                    },
+                    {
+                      "point": [
+                        1850.7844809180383,
+                        216.57116692570654
+                      ]
+                    },
+                    {
+                      "point": [
+                        1904.96642919773,
+                        216.57116692570654
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      },
+      "children": [
+        "61c3245537a2d7001b381f1c"
+      ],
+      "variables": [],
+      "intentStepIDs": [],
+      "versionID": "61bdea74704ad60007b8ce06",
+      "creatorID": 78782
+    },
+    "61c32424b2e7c0001c716874": {
+      "_id": "61c32424b2e7c0001c716874",
+      "name": "stop",
+      "type": "COMPONENT",
+      "zoom": 80,
+      "offsetX": 272,
+      "offsetY": 104,
+      "modified": 1640180359,
+      "nodes": {
+        "61c324243dec051bd8476116": {
+          "nodeID": "61c324243dec051bd8476116",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c32a193dec051bd84762f9",
+                "id": "61c324253dec051bd8476117"
+              }
+            ]
+          }
+        },
+        "61c32a193dec051bd84762f6": {
+          "nodeID": "61c32a193dec051bd84762f6",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Do you want to exit?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c32a393dec051bd8476301",
+                "id": "61c32a193dec051bd84762f8"
+              }
+            ]
+          }
+        },
+        "61c32a193dec051bd84762f9": {
+          "nodeID": "61c32a193dec051bd84762f9",
+          "type": "block",
+          "coords": [
+            762.5,
+            117.51626968383789
+          ],
+          "data": {
+            "name": "exit",
+            "color": "standard",
+            "steps": [
+              "61c32a193dec051bd84762f6",
+              "61c32a393dec051bd8476301"
+            ]
+          }
+        },
+        "61c32a393dec051bd8476301": {
+          "nodeID": "61c32a393dec051bd8476301",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "VF.YES",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "else": {
+              "types": [
+                "reprompt"
+              ],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": ""
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c32a393dec051bd8476305"
+              },
+              {
+                "type": "",
+                "target": "61c32a613dec051bd847630b",
+                "id": "61c32a393dec051bd8476304",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        927.5248413085938,
+                        260.64777851104736
+                      ]
+                    },
+                    {
+                      "point": [
+                        974.390625,
+                        260.64777851104736
+                      ]
+                    },
+                    {
+                      "point": [
+                        974.390625,
+                        178.51496601104733
+                      ]
+                    },
+                    {
+                      "point": [
+                        1021.2564086914062,
+                        178.51496601104733
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c32a613dec051bd8476309": {
+          "nodeID": "61c32a613dec051bd8476309",
+          "type": "exit",
+          "data": {
+            "ports": []
+          }
+        },
+        "61c32a613dec051bd847630b": {
+          "nodeID": "61c32a613dec051bd847630b",
+          "type": "block",
+          "coords": [
+            1186.25,
+            147.5162696838379
+          ],
+          "data": {
+            "name": "exit",
+            "color": "standard",
+            "steps": [
+              "61c32a613dec051bd8476309"
+            ]
+          }
+        }
+      },
+      "children": [],
+      "variables": [],
+      "intentStepIDs": [],
+      "versionID": "61bdea74704ad60007b8ce06",
+      "creatorID": 78782
+    },
+    "61c3243937a2d7001b381f1b": {
+      "_id": "61c3243937a2d7001b381f1b",
+      "name": "cancel",
+      "type": "COMPONENT",
+      "zoom": 100,
+      "offsetX": 272,
+      "offsetY": 104,
+      "modified": 1640178746,
+      "nodes": {
+        "61c324393dec051bd8476136": {
+          "nodeID": "61c324393dec051bd8476136",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c3243a3dec051bd8476137"
+              }
+            ]
+          }
+        }
+      },
+      "children": [],
+      "variables": [],
+      "intentStepIDs": [],
+      "versionID": "61bdea74704ad60007b8ce06",
+      "creatorID": 78782
+    },
+    "61c3245537a2d7001b381f1c": {
+      "_id": "61c3245537a2d7001b381f1c",
+      "name": "checkout",
+      "type": "COMPONENT",
+      "zoom": 80,
+      "offsetX": 272,
+      "offsetY": 104,
+      "modified": 1640190764,
+      "nodes": {
+        "61c324553dec051bd847615b": {
+          "nodeID": "61c324553dec051bd847615b",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c3513f3dec051bd8476402",
+                "id": "61c324563dec051bd847615c",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        525.0247650146484,
+                        200.68357706069946
+                      ]
+                    },
+                    {
+                      "point": [
+                        549.0247650146484,
+                        200.68357706069946
+                      ]
+                    },
+                    {
+                      "point": [
+                        549.0247650146484,
+                        157.72427988052368
+                      ]
+                    },
+                    {
+                      "point": [
+                        546.0064849853516,
+                        157.72427988052368
+                      ]
+                    },
+                    {
+                      "point": [
+                        546.0064849853516,
+                        114.76498270034787
+                      ]
+                    },
+                    {
+                      "point": [
+                        570.0064849853516,
+                        114.76498270034787
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c3513f3dec051bd84763ff": {
+          "nodeID": "61c3513f3dec051bd84763ff",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "You ordered {{[burger_type].burger_type}} "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c3513f3dec051bd8476401"
+              }
+            ]
+          }
+        },
+        "61c3513f3dec051bd8476402": {
+          "nodeID": "61c3513f3dec051bd8476402",
+          "type": "block",
+          "coords": [
+            735,
+            83.76626968383789
+          ],
+          "data": {
+            "name": "Order confirmation",
+            "color": "standard",
+            "steps": [
+              "61c3513f3dec051bd84763ff"
+            ]
+          }
+        }
+      },
+      "children": [],
+      "variables": [],
+      "intentStepIDs": [],
+      "versionID": "61bdea74704ad60007b8ce06",
+      "creatorID": 78782
+    },
+    "61c32696975c6f001b4d45c0": {
+      "_id": "61c32696975c6f001b4d45c0",
+      "name": "account",
+      "type": "COMPONENT",
+      "zoom": 80,
+      "offsetX": 272,
+      "offsetY": 104,
+      "modified": 1640190696,
+      "nodes": {
+        "61c326963dec051bd84761a5": {
+          "nodeID": "61c326963dec051bd84761a5",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c326e03dec051bd84761be",
+                "id": "61c326973dec051bd84761a6",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        525.0247650146484,
+                        200.68357706069946
+                      ]
+                    },
+                    {
+                      "point": [
+                        576.3801574707031,
+                        200.68357706069946
+                      ]
+                    },
+                    {
+                      "point": [
+                        576.3801574707031,
+                        138.2259202003479
+                      ]
+                    },
+                    {
+                      "point": [
+                        627.7355499267578,
+                        138.2259202003479
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c326e03dec051bd84761be": {
+          "nodeID": "61c326e03dec051bd84761be",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Hi, this is the first time your use our system, so we'd like to collect some information. What should we call you?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c3274b3dec051bd84761ca",
+                "id": "61c326e03dec051bd84761c0"
+              }
+            ]
+          }
+        },
+        "61c326e03dec051bd84761c1": {
+          "nodeID": "61c326e03dec051bd84761c1",
+          "type": "block",
+          "coords": [
+            793.75,
+            58.76626968383789
+          ],
+          "data": {
+            "name": "New Block 1",
+            "color": "standard",
+            "steps": [
+              "61c326e03dec051bd84761be",
+              "61c3274b3dec051bd84761ca"
+            ]
+          }
+        },
+        "61c3274b3dec051bd84761ca": {
+          "nodeID": "61c3274b3dec051bd84761ca",
+          "type": "capture",
+          "data": {
+            "slot": "VF.NAME",
+            "chips": null,
+            "variable": "name",
+            "slotInputs": [],
+            "noReply": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61c3274b3dec051bd84761cd"
+              }
+            ]
+          }
+        }
+      },
+      "children": [],
+      "variables": [],
+      "intentStepIDs": [],
+      "versionID": "61bdea74704ad60007b8ce06",
+      "creatorID": 78782
+    }
+  }
+}
