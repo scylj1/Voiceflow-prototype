@@ -984,7 +984,9 @@
       "order_id",
       "factor3",
       "factor4",
-      "order_id_order"
+      "order_id_order",
+      "error",
+      "letter"
     ],
     "platformData": {
       "slots": [],
@@ -2814,7 +2816,7 @@
       "_id": "61bdea74704ad60007b8ce07",
       "offsetX": -374.68479473004936,
       "offsetY": 495.08410026113086,
-      "zoom": 54.97715366135036,
+      "zoom": 58.959180946151385,
       "nodes": {
         "start00000000000000000000": {
           "nodeID": "start00000000000000000000",
@@ -2849,26 +2851,26 @@
                   "points": [
                     {
                       "point": [
-                        1333.380743075464,
-                        -288.17156391132477
+                        1333.3807583610953,
+                        -288.17154742891535
                       ]
                     },
                     {
                       "point": [
-                        1402.3769781336455,
-                        -288.17156391132477
+                        1402.3770167605303,
+                        -288.17154742891535
                       ]
                     },
                     {
                       "point": [
-                        1402.3769781336455,
-                        -383.99829259463274
+                        1402.3770167605303,
+                        -383.9983234407997
                       ]
                     },
                     {
                       "point": [
-                        1471.3732131918273,
-                        -383.99829259463274
+                        1471.373275159965,
+                        -383.9983234407997
                       ],
                       "allowedToTop": true
                     }
@@ -2891,7 +2893,6 @@
             "steps": [
               "61c507d7aac20057b5a295dc",
               "61c323763dec051bd84760c8",
-              "61c49313b97af89de2ca3fd3",
               "61c23c23d0ce6c27f93992a2",
               "61c33c8d3dec051bd8476377"
             ]
@@ -2939,7 +2940,7 @@
             "ports": [
               {
                 "type": "next",
-                "target": "61c49313b97af89de2ca3fd3",
+                "target": "61c23c23d0ce6c27f93992a2",
                 "id": "61c323763dec051bd84760cb"
               }
             ]
@@ -3032,26 +3033,26 @@
                   "points": [
                     {
                       "point": [
-                        1801.39159891211,
-                        117.97831196002072
+                        1801.391560878554,
+                        117.97827384650581
                       ]
                     },
                     {
                       "point": [
-                        1968.6787569492744,
-                        117.97831196002072
+                        1968.6787757952943,
+                        117.97827384650581
                       ]
                     },
                     {
                       "point": [
-                        1968.6787569492744,
-                        291.2057114790851
+                        1968.6787757952943,
+                        291.20567015439934
                       ]
                     },
                     {
                       "point": [
-                        2135.9659149864387,
-                        291.2057114790851
+                        2135.965990712035,
+                        291.20567015439934
                       ],
                       "allowedToTop": true
                     }
@@ -3066,33 +3067,33 @@
                   "points": [
                     {
                       "point": [
-                        1471.3914983578868,
-                        172.45751500163993
+                        1471.391560878554,
+                        172.45749732477057
                       ],
                       "reversed": true
                     },
                     {
                       "point": [
-                        1447.3914983578868,
-                        172.45751500163993
+                        1447.391560878554,
+                        172.45749732477057
                       ]
                     },
                     {
                       "point": [
-                        1447.3914983578868,
-                        291.15157891800374
+                        1447.391560878554,
+                        345.6306844824455
                       ]
                     },
                     {
                       "point": [
-                        1635.5993897448043,
-                        291.15157891800374
+                        1635.5992529635764,
+                        345.6306844824455
                       ]
                     },
                     {
                       "point": [
-                        1635.5993897448043,
-                        377.16687492516627
+                        1635.5992529635764,
+                        377.1667555127947
                       ],
                       "toTop": true,
                       "allowedToTop": true
@@ -3164,27 +3165,6 @@
             ]
           }
         },
-        "61c49313b97af89de2ca3fd3": {
-          "nodeID": "61c49313b97af89de2ca3fd3",
-          "type": "speak",
-          "data": {
-            "randomize": true,
-            "canvasVisibility": "preview",
-            "dialogs": [
-              {
-                "voice": "Alexa",
-                "content": "We offer burgers, chips and drinks. You can make transactions, check your past orders, and check your current ordering status. If you need help, you can say help to get some guidance. If you want to quit earlier, you can say stop at any time. "
-              }
-            ],
-            "ports": [
-              {
-                "type": "next",
-                "target": "61c23c23d0ce6c27f93992a2",
-                "id": "61c49313b97af89de2ca3fd6"
-              }
-            ]
-          }
-        },
         "61c49831b97af89de2ca40f7": {
           "nodeID": "61c49831b97af89de2ca40f7",
           "type": "setV2",
@@ -3235,7 +3215,7 @@
               },
               {
                 "voice": "Alexa",
-                "content": "What would you like to do?"
+                "content": "OK, what would you like to do?"
               }
             ],
             "ports": [
@@ -3759,7 +3739,7 @@
             "dialogs": [
               {
                 "voice": "Alexa",
-                "content": "Thanks for visiting, goodbye!"
+                "content": "Thanks for visiting, goodbye {{[name].name}}!"
               }
             ],
             "ports": [
@@ -3869,7 +3849,37 @@
               {
                 "type": "next",
                 "target": "61c23c23d0ce6c27f93992a2",
-                "id": "61c6605c1bb7d2324cd96586"
+                "id": "61c6605c1bb7d2324cd96586",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2488.194596943174,
+                        174.48629917088178
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        2144.273528445487,
+                        174.48629917088178
+                      ]
+                    },
+                    {
+                      "point": [
+                        2144.273528445487,
+                        31.80644751955596
+                      ]
+                    },
+                    {
+                      "point": [
+                        1800.3524599478,
+                        31.80644751955596
+                      ],
+                      "reversed": true
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -3894,7 +3904,7 @@
       "name": "ROOT",
       "versionID": "61bdea74704ad60007b8ce06",
       "creatorID": 78782,
-      "modified": 1640394053,
+      "modified": 1640954613,
       "intentStepIDs": [
         "61c32ffb3dec051bd8476352",
         "61c33c383dec051bd8476363",
@@ -3908,7 +3918,7 @@
       "zoom": 80,
       "offsetX": 241,
       "offsetY": 41,
-      "modified": 1640388246,
+      "modified": 1640954488,
       "nodes": {
         "61c317da3dec051bd8476074": {
           "nodeID": "61c317da3dec051bd8476074",
@@ -4220,10 +4230,10 @@
       "_id": "61c3237cb2e7c0001c716872",
       "name": "Welcome",
       "type": "COMPONENT",
-      "zoom": 49.73434543112907,
+      "zoom": 80,
       "offsetX": -492.2460769739482,
       "offsetY": 122.05506827087878,
-      "modified": 1640394105,
+      "modified": 1640954600,
       "nodes": {
         "61c3237c3dec051bd84760ce": {
           "nodeID": "61c3237c3dec051bd84760ce",
@@ -4297,7 +4307,7 @@
             "ports": [
               {
                 "type": "next",
-                "target": "61c325b63dec051bd847618a",
+                "target": "61c761568458efe107c74730",
                 "id": "61c323843dec051bd84760d4"
               }
             ]
@@ -4315,6 +4325,7 @@
             "color": "standard",
             "steps": [
               "61c323843dec051bd84760d2",
+              "61c761568458efe107c74730",
               "61c325b63dec051bd847618a",
               "61c3263a3dec051bd8476192"
             ]
@@ -4866,6 +4877,27 @@
               }
             ]
           }
+        },
+        "61c761568458efe107c74730": {
+          "nodeID": "61c761568458efe107c74730",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "We offer burgers, chips and drinks. You can make transactions, check your past orders, and check your current ordering status. If you need help, you can say 'help' to get some guidance. If you want to quit earlier, you can say 'stop' at any time. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c325b63dec051bd847618a",
+                "id": "61c761568458efe107c74733"
+              }
+            ]
+          }
         }
       },
       "children": [
@@ -4881,10 +4913,10 @@
       "_id": "61c323fd975c6f001b4d45bb",
       "name": "order",
       "type": "COMPONENT",
-      "zoom": 62.528213481108416,
+      "zoom": 54.05671081443629,
       "offsetX": 315.5254310192833,
       "offsetY": 422.1230366234472,
-      "modified": 1640393249,
+      "modified": 1640954528,
       "nodes": {
         "61c323fd3dec051bd84760f6": {
           "nodeID": "61c323fd3dec051bd84760f6",
@@ -5662,7 +5694,7 @@
       "zoom": 80,
       "offsetX": 272,
       "offsetY": 75,
-      "modified": 1640394115,
+      "modified": 1640954581,
       "nodes": {
         "61c324243dec051bd8476116": {
           "nodeID": "61c324243dec051bd8476116",
@@ -5922,10 +5954,10 @@
       "_id": "61c3245537a2d7001b381f1c",
       "name": "checkout",
       "type": "COMPONENT",
-      "zoom": 65.76757229864597,
+      "zoom": 55.69602030515668,
       "offsetX": -46.53016958908074,
       "offsetY": 290.1913279472014,
-      "modified": 1640393627,
+      "modified": 1640954369,
       "nodes": {
         "61c324553dec051bd847615b": {
           "nodeID": "61c324553dec051bd847615b",
@@ -6216,26 +6248,26 @@
                   "points": [
                     {
                       "point": [
-                        1323.8445800974046,
-                        467.00510406825026
+                        1323.844426878624,
+                        529.4530427480062
                       ]
                     },
                     {
                       "point": [
-                        1393.3923084999255,
-                        467.00510406825026
+                        1390.100034119475,
+                        529.4530427480062
                       ]
                     },
                     {
                       "point": [
-                        1393.3923084999255,
-                        80.43092623677698
+                        1390.100034119475,
+                        111.28876006852236
                       ]
                     },
                     {
                       "point": [
-                        1462.9400369024465,
-                        80.43092623677698
+                        1456.3556413603258,
+                        111.28876006852236
                       ],
                       "allowedToTop": true
                     }
@@ -6266,26 +6298,26 @@
                   "points": [
                     {
                       "point": [
-                        1329.7657604015703,
-                        145.56934455865508
+                        1329.7657009123154,
+                        145.56934974096083
                       ]
                     },
                     {
                       "point": [
-                        1396.3529450541744,
-                        145.56934455865508
+                        1393.0606711363207,
+                        145.56934974096083
                       ]
                     },
                     {
                       "point": [
-                        1396.3529450541744,
-                        80.43090593582929
+                        1393.0606711363207,
+                        111.28876006852236
                       ]
                     },
                     {
                       "point": [
-                        1462.9401297067784,
-                        80.43090593582929
+                        1456.3556413603258,
+                        111.28876006852236
                       ],
                       "allowedToTop": true
                     }
@@ -6329,39 +6361,17 @@
           "nodeID": "61c4f84baac20057b5a28ca3",
           "type": "block",
           "coords": [
-            1627.9336961972256,
-            49.43221934283429
+            1621.3491468539005,
+            80.29010187664996
           ],
           "data": {
             "name": "finish",
             "color": "standard",
             "steps": [
               "61c652941bb7d2324cd95d9e",
-              "61c4f87baac20057b5a28cad",
               "61c4f84baac20057b5a28ca0",
               "61c4f8f5aac20057b5a28cb4",
               "61c4f907aac20057b5a28cbc"
-            ]
-          }
-        },
-        "61c4f87baac20057b5a28cad": {
-          "nodeID": "61c4f87baac20057b5a28cad",
-          "type": "setV2",
-          "data": {
-            "sets": [
-              {
-                "type": "advance",
-                "variable": "price",
-                "expression": "6*{{[beef_burger].beef_burger}}+5*{{[chicken_burger].chicken_burger}}+4*{{[vegetable_burger].vegetable_burger}}+2*{{[chips].chips}}+1*{{[coke].coke}}+1*{{[fanta].fanta}}"
-              }
-            ],
-            "title": "set price",
-            "ports": [
-              {
-                "type": "next",
-                "target": "61c4f84baac20057b5a28ca0",
-                "id": "61c4f87baac20057b5a28cb0"
-              }
             ]
           }
         },
@@ -6461,26 +6471,26 @@
                   "points": [
                     {
                       "point": [
-                        1792.9584001053938,
-                        317.4595535943298
+                        1786.3739946185879,
+                        370.81747359180264
                       ]
                     },
                     {
                       "point": [
-                        1845.9793082762626,
-                        317.4595535943298
+                        1874.1086393268765,
+                        370.81747359180264
                       ]
                     },
                     {
                       "point": [
-                        1845.9793082762626,
-                        81.96294015208419
+                        1874.1086393268765,
+                        -12.102995497965942
                       ]
                     },
                     {
                       "point": [
-                        1899.0002164471312,
-                        81.96294015208419
+                        1961.843284035165,
+                        -12.102995497965942
                       ],
                       "allowedToTop": true
                     }
@@ -6495,26 +6505,26 @@
                   "points": [
                     {
                       "point": [
-                        1792.9584001053934,
-                        371.9387591155649
+                        1786.3739946185879,
+                        425.29665782071953
                       ]
                     },
                     {
                       "point": [
-                        2080.683227592738,
-                        371.9387591155649
+                        1871.6808665245185,
+                        425.29665782071953
                       ]
                     },
                     {
                       "point": [
-                        2080.683227592738,
-                        504.568254815793
+                        1871.6808665245185,
+                        517.3898516167865
                       ]
                     },
                     {
                       "point": [
-                        2368.4080550800827,
-                        504.568254815793
+                        1956.9877384304489,
+                        517.3898516167865
                       ],
                       "allowedToTop": true
                     }
@@ -6580,26 +6590,26 @@
                   "points": [
                     {
                       "point": [
-                        2229.018672454411,
-                        249.56446101162575
+                        2291.8615553584336,
+                        217.946507061347
                       ]
                     },
                     {
                       "point": [
-                        2294.97529807215,
-                        249.56446101162575
+                        2334.165239313568,
+                        217.946507061347
                       ]
                     },
                     {
                       "point": [
-                        2294.97529807215,
-                        88.0564261995833
+                        2334.165239313568,
+                        118.58356498101246
                       ]
                     },
                     {
                       "point": [
-                        2360.931923689889,
-                        88.0564261995833
+                        2376.468923268702,
+                        118.58356498101246
                       ],
                       "allowedToTop": true
                     }
@@ -6614,27 +6624,35 @@
                   "points": [
                     {
                       "point": [
-                        2229.0185187472352,
-                        304.04366653286087
-                      ]
-                    },
-                    {
-                      "point": [
-                        2298.713286913659,
-                        304.04366653286087
-                      ]
-                    },
-                    {
-                      "point": [
-                        2298.713286913659,
-                        504.568254815793
-                      ]
-                    },
-                    {
-                      "point": [
-                        2368.4080550800827,
-                        504.568254815793
+                        1961.8615553584336,
+                        272.42569129026396
                       ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        1937.8615553584336,
+                        272.42569129026396
+                      ]
+                    },
+                    {
+                      "point": [
+                        1937.8615553584336,
+                        378.90777145352524
+                      ]
+                    },
+                    {
+                      "point": [
+                        2121.987738430449,
+                        378.90777145352524
+                      ]
+                    },
+                    {
+                      "point": [
+                        2121.987738430449,
+                        485.3898516167865
+                      ],
+                      "toTop": true,
                       "allowedToTop": true
                     }
                   ]
@@ -6647,8 +6665,8 @@
           "nodeID": "61c4f93baac20057b5a28cca",
           "type": "block",
           "coords": [
-            2063.9938305648616,
-            50.964214091291
+            2126.8368525337064,
+            -43.10166700843574
           ],
           "data": {
             "name": "save",
@@ -6706,8 +6724,8 @@
           "nodeID": "61c4f9d4aac20057b5a28cdd",
           "type": "block",
           "coords": [
-            2533.4017037180906,
-            473.56956426260047
+            2121.9812765901333,
+            486.3911867264942
           ],
           "data": {
             "name": "failure",
@@ -6742,8 +6760,8 @@
           "nodeID": "61c4fa28aac20057b5a28d4d",
           "type": "block",
           "coords": [
-            2525.9255471012025,
-            57.05772737410558
+            2541.462256417126,
+            87.58487476125474
           ],
           "data": {
             "name": "Finished",
@@ -6785,7 +6803,7 @@
             "ports": [
               {
                 "type": "next",
-                "target": "61c4f87baac20057b5a28cad",
+                "target": "61c4f84baac20057b5a28ca0",
                 "id": "61c652941bb7d2324cd95da1"
               }
             ]
@@ -6865,7 +6883,7 @@
       "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640394121,
+      "modified": 1640954315,
       "nodes": {
         "61c326963dec051bd84761a5": {
           "nodeID": "61c326963dec051bd84761a5",
@@ -7305,7 +7323,7 @@
       "zoom": 80,
       "offsetX": 273,
       "offsetY": -5,
-      "modified": 1640390308,
+      "modified": 1640954410,
       "nodes": {
         "61c470eab97af89de2ca3375": {
           "nodeID": "61c470eab97af89de2ca3375",
@@ -7891,7 +7909,7 @@
       "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640363745,
+      "modified": 1640954441,
       "nodes": {
         "61c47358b97af89de2ca368b": {
           "nodeID": "61c47358b97af89de2ca368b",
@@ -7971,7 +7989,7 @@
             28.76626968383789
           ],
           "data": {
-            "name": "get drink copy",
+            "name": "get drink",
             "color": "standard",
             "steps": [
               "61c47367b97af89de2ca36dc",
@@ -8243,7 +8261,7 @@
       "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640363669,
+      "modified": 1640954434,
       "nodes": {
         "61c475a5b97af89de2ca382b": {
           "nodeID": "61c475a5b97af89de2ca382b",
@@ -8361,10 +8379,10 @@
       "_id": "61c4761f9e224f001b1a4e48",
       "name": "print order",
       "type": "COMPONENT",
-      "zoom": 62.51808558031913,
+      "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640393719,
+      "modified": 1640954540,
       "nodes": {
         "61c47620b97af89de2ca38e0": {
           "nodeID": "61c47620b97af89de2ca38e0",
@@ -10343,7 +10361,7 @@
       "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640393841,
+      "modified": 1640954357,
       "nodes": {
         "61c48e07b97af89de2ca3dba": {
           "nodeID": "61c48e07b97af89de2ca3dba",
@@ -10761,10 +10779,10 @@
       "_id": "61c4995f78fd2c001bbf1955",
       "name": "remove",
       "type": "COMPONENT",
-      "zoom": 65.07924813032156,
+      "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640386736,
+      "modified": 1640954564,
       "nodes": {
         "61c49960b97af89de2ca4263": {
           "nodeID": "61c49960b97af89de2ca4263",
@@ -11632,7 +11650,7 @@
       "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640386097,
+      "modified": 1640954363,
       "nodes": {
         "61c4f44baac20057b5a287ed": {
           "nodeID": "61c4f44baac20057b5a287ed",
@@ -11729,7 +11747,7 @@
             "dialogs": [
               {
                 "voice": "Alexa",
-                "content": "There are four status: not begin, ordering, being processing, completed"
+                "content": "There are four statuses: not begin, ordering, being processing, completed"
               }
             ],
             "ports": [
@@ -11752,10 +11770,10 @@
       "_id": "61c4f6a1975c6f001b4d4742",
       "name": "add item",
       "type": "COMPONENT",
-      "zoom": 65.0202446033557,
+      "zoom": 64.52034051219621,
       "offsetX": 3.3036433461443266,
       "offsetY": 232.35813215948514,
-      "modified": 1640388281,
+      "modified": 1640954323,
       "nodes": {
         "61c4f6a1aac20057b5a2891c": {
           "nodeID": "61c4f6a1aac20057b5a2891c",
@@ -12024,11 +12042,11 @@
           "type": "visual",
           "data": {
             "name": "Visuals",
-            "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1640275640183-menu.png",
+            "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1640790472856-menu.png",
             "device": null,
             "dimensions": {
-              "width": 766,
-              "height": 540
+              "width": 1128,
+              "height": 675
             },
             "visualType": "image",
             "canvasVisibility": "full",
@@ -12359,8 +12377,37 @@
               },
               {
                 "type": "",
-                "target": null,
-                "id": "61c4f706aac20057b5a28b68"
+                "target": "61c75ee2a1b769d3d6e63342",
+                "id": "61c4f706aac20057b5a28b68",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1997.4832911420415,
+                        568.5154119574843
+                      ]
+                    },
+                    {
+                      "point": [
+                        2050.083263876216,
+                        568.5154119574843
+                      ]
+                    },
+                    {
+                      "point": [
+                        2050.083263876216,
+                        294.90249970574354
+                      ]
+                    },
+                    {
+                      "point": [
+                        2102.6832366103904,
+                        294.90249970574354
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -12480,6 +12527,277 @@
               }
             ]
           }
+        },
+        "61c75ee2a1b769d3d6e6334a": {
+          "nodeID": "61c75ee2a1b769d3d6e6334a",
+          "type": "ifV2",
+          "data": {
+            "expressions": [
+              {
+                "type": null,
+                "name": "",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "price"
+                      },
+                      {
+                        "type": "variable",
+                        "value": "error"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "noMatch": {
+              "type": "path",
+              "pathName": "No Match"
+            },
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61c75ee2a1b769d3d6e6334c"
+              },
+              {
+                "type": "",
+                "target": "61c75f4ea1b769d3d6e634e8",
+                "id": "61c75ee2a1b769d3d6e6334b",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2102.701539852744,
+                        469.4832424493913
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        2078.701539852744,
+                        469.4832424493913
+                      ]
+                    },
+                    {
+                      "point": [
+                        2078.701539852744,
+                        745.0480360194774
+                      ]
+                    },
+                    {
+                      "point": [
+                        2109.018518246608,
+                        745.0480360194774
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61c75ee2a1b769d3d6e63347": {
+          "nodeID": "61c75ee2a1b769d3d6e63347",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "advance",
+                "variable": "price",
+                "expression": "6*beef_burger+5*chicken_burger+4*vegetable_burger+2*chips+1*coke+1*fanta"
+              },
+              {
+                "type": "value",
+                "variable": "letter",
+                "expression": "a"
+              },
+              {
+                "type": "advance",
+                "variable": "error",
+                "expression": "2*{{[letter].letter}}"
+              }
+            ],
+            "title": "set price",
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c75ee2a1b769d3d6e6334a",
+                "id": "61c75ee2a1b769d3d6e63348"
+              }
+            ]
+          }
+        },
+        "61c75ee2a1b769d3d6e63344": {
+          "nodeID": "61c75ee2a1b769d3d6e63344",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "OK. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c75ee2a1b769d3d6e63347",
+                "id": "61c75ee2a1b769d3d6e63345"
+              }
+            ]
+          }
+        },
+        "61c75ee2a1b769d3d6e63342": {
+          "nodeID": "61c75ee2a1b769d3d6e63342",
+          "type": "block",
+          "coords": [
+            2267.6767328039587,
+            263.90380856294473
+          ],
+          "data": {
+            "name": "finish",
+            "color": "standard",
+            "steps": [
+              "61c75ee2a1b769d3d6e63344",
+              "61c75ee2a1b769d3d6e63347",
+              "61c75ee2a1b769d3d6e6334a"
+            ]
+          }
+        },
+        "61c75f4ea1b769d3d6e634e8": {
+          "nodeID": "61c75f4ea1b769d3d6e634e8",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Sorry, there is something wrong with your input. The order is cancelled, you can restart ordering. Thanks!"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c75f7ea1b769d3d6e635b8",
+                "id": "61c75f4ea1b769d3d6e634e9"
+              }
+            ]
+          }
+        },
+        "61c75f4ea1b769d3d6e634e6": {
+          "nodeID": "61c75f4ea1b769d3d6e634e6",
+          "type": "block",
+          "coords": [
+            2275.0329830632604,
+            665.5883584419937
+          ],
+          "data": {
+            "name": "failure",
+            "color": "standard",
+            "steps": [
+              "61c75f4ea1b769d3d6e634e8",
+              "61c75f7ea1b769d3d6e635b8"
+            ]
+          }
+        },
+        "61c75f7ea1b769d3d6e635b8": {
+          "nodeID": "61c75f7ea1b769d3d6e635b8",
+          "type": "setV2",
+          "data": {
+            "sets": [
+              {
+                "type": "value",
+                "variable": "allergy",
+                "expression": "0"
+              },
+              {
+                "type": "value",
+                "variable": "beef_burger",
+                "expression": "0"
+              },
+              {
+                "type": "value",
+                "variable": "chicken_burger",
+                "expression": "0"
+              },
+              {
+                "type": "value",
+                "variable": "vegetable_burger",
+                "expression": "0"
+              },
+              {
+                "type": "value",
+                "variable": "coke",
+                "expression": "0"
+              },
+              {
+                "type": "value",
+                "variable": "fanta",
+                "expression": "0"
+              },
+              {
+                "type": "value",
+                "variable": "chips",
+                "expression": "0"
+              },
+              {
+                "type": "value",
+                "variable": "delivery_method",
+                "expression": "0"
+              },
+              {
+                "type": "value",
+                "variable": "price",
+                "expression": "0"
+              }
+            ],
+            "title": "reset",
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c4f6baaac20057b5a28977",
+                "id": "61c75f7ea1b769d3d6e635b9",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        2110.057709083964,
+                        876.2197172894046
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        1483.2690535478125,
+                        876.2197172894046
+                      ]
+                    },
+                    {
+                      "point": [
+                        1483.2690535478125,
+                        191.00241990690319
+                      ]
+                    },
+                    {
+                      "point": [
+                        856.4803980116612,
+                        191.00241990690319
+                      ],
+                      "reversed": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
         }
       },
       "children": [
@@ -12500,7 +12818,7 @@
       "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640386139,
+      "modified": 1640954560,
       "nodes": {
         "61c5018caac20057b5a28de7": {
           "nodeID": "61c5018caac20057b5a28de7",
@@ -12626,7 +12944,7 @@
       "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640386232,
+      "modified": 1640954483,
       "nodes": {
         "61c50493aac20057b5a28eee": {
           "nodeID": "61c50493aac20057b5a28eee",
@@ -12642,32 +12960,32 @@
             "ports": [
               {
                 "type": "next",
-                "target": "61c504b2aac20057b5a28ef5",
+                "target": "61cb3482655d9cf5d08eb3b1",
                 "id": "61c504aeaac20057b5a28eef",
                 "data": {
                   "points": [
                     {
                       "point": [
                         525.0247650146484,
-                        200.68357706069946
+                        200.6835961341858
                       ]
                     },
                     {
                       "point": [
                         556.890625,
-                        200.68357706069946
+                        200.6835961341858
                       ]
                     },
                     {
                       "point": [
                         556.890625,
-                        148.51498270034787
+                        126.03125238418579
                       ]
                     },
                     {
                       "point": [
                         588.7564849853516,
-                        148.51498270034787
+                        126.03125238418579
                       ],
                       "allowedToTop": true
                     }
@@ -12706,14 +13024,171 @@
           "nodeID": "61c504b2aac20057b5a28ef5",
           "type": "block",
           "coords": [
-            753.75,
-            117.51626968383789
+            1148.75,
+            302.5162696838379
           ],
           "data": {
-            "name": "greeting",
+            "name": "greeting with name",
             "color": "standard",
             "steps": [
               "61c504b2aac20057b5a28ef2"
+            ]
+          }
+        },
+        "61cb3482655d9cf5d08eb3ad": {
+          "nodeID": "61cb3482655d9cf5d08eb3ad",
+          "type": "ifV2",
+          "data": {
+            "expressions": [
+              {
+                "type": null,
+                "name": "",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "name"
+                      },
+                      {
+                        "type": "value",
+                        "value": "0"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "noMatch": {
+              "type": "path",
+              "pathName": "No Match"
+            },
+            "ports": [
+              {
+                "type": "else",
+                "target": "61c504b2aac20057b5a28ef5",
+                "id": "61cb3482655d9cf5d08eb3b0",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        918.7748413085938,
+                        231.1849069595337
+                      ]
+                    },
+                    {
+                      "point": [
+                        951.265625,
+                        231.1849069595337
+                      ]
+                    },
+                    {
+                      "point": [
+                        951.265625,
+                        333.5149850845337
+                      ]
+                    },
+                    {
+                      "point": [
+                        983.7564086914062,
+                        333.5149850845337
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "61cb34b4655d9cf5d08eb3bb",
+                "id": "61cb3482655d9cf5d08eb3af",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        918.7748413085938,
+                        175.71613788604736
+                      ]
+                    },
+                    {
+                      "point": [
+                        955.640625,
+                        175.71613788604736
+                      ]
+                    },
+                    {
+                      "point": [
+                        955.640625,
+                        21.01496601104735
+                      ]
+                    },
+                    {
+                      "point": [
+                        992.5064086914062,
+                        21.01496601104735
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61cb3482655d9cf5d08eb3b1": {
+          "nodeID": "61cb3482655d9cf5d08eb3b1",
+          "type": "block",
+          "coords": [
+            753.75,
+            95.03253936767578
+          ],
+          "data": {
+            "name": "if name given",
+            "color": "standard",
+            "steps": [
+              "61cb3482655d9cf5d08eb3ad"
+            ]
+          }
+        },
+        "61cb34b4655d9cf5d08eb3bd": {
+          "nodeID": "61cb34b4655d9cf5d08eb3bd",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Hi! Welcome to Burger Box!"
+              },
+              {
+                "voice": "Alexa",
+                "content": "Hello! Welcome to Burger Box!"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61cb34b4655d9cf5d08eb3be"
+              }
+            ]
+          }
+        },
+        "61cb34b4655d9cf5d08eb3bb": {
+          "nodeID": "61cb34b4655d9cf5d08eb3bb",
+          "type": "block",
+          "coords": [
+            1157.5,
+            -9.98373031616211
+          ],
+          "data": {
+            "name": "greeting without name",
+            "color": "standard",
+            "steps": [
+              "61cb34b4655d9cf5d08eb3bd"
             ]
           }
         }
@@ -12731,7 +13206,7 @@
       "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640386243,
+      "modified": 1640954485,
       "nodes": {
         "61c5b791b37daf58b3d949bb": {
           "nodeID": "61c5b791b37daf58b3d949bb",
@@ -12836,7 +13311,7 @@
       "zoom": 80,
       "offsetX": 133,
       "offsetY": 100,
-      "modified": 1640394120,
+      "modified": 1640954447,
       "nodes": {
         "61c5b832b37daf58b3d949fd": {
           "nodeID": "61c5b832b37daf58b3d949fd",
@@ -12933,7 +13408,7 @@
       "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640386263,
+      "modified": 1640954586,
       "nodes": {
         "61c5b970b37daf58b3d94a86": {
           "nodeID": "61c5b970b37daf58b3d94a86",
@@ -13009,7 +13484,7 @@
       "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640386268,
+      "modified": 1640954537,
       "nodes": {
         "61c5ba19b37daf58b3d94aca": {
           "nodeID": "61c5ba19b37daf58b3d94aca",
@@ -13114,7 +13589,7 @@
       "zoom": 80,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640386272,
+      "modified": 1640954526,
       "nodes": {
         "61c5bacbb37daf58b3d94b0f": {
           "nodeID": "61c5bacbb37daf58b3d94b0f",
@@ -13175,6 +13650,10 @@
               {
                 "voice": "Alexa",
                 "content": "I'm sorry for that. "
+              },
+              {
+                "voice": "Alexa",
+                "content": "Sorry to hear that. "
               }
             ],
             "ports": [
@@ -13212,10 +13691,10 @@
       "_id": "61c5d140975c6f001b4d4804",
       "name": "tutorial",
       "type": "COMPONENT",
-      "zoom": 61.0338206812739,
+      "zoom": 37.41702958196155,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640379936,
+      "modified": 1640954590,
       "nodes": {
         "61c5d140b37daf58b3d94faf": {
           "nodeID": "61c5d140b37daf58b3d94faf",
@@ -13595,7 +14074,7 @@
               "types": [
                 "reprompt"
               ],
-              "timeout": 30,
+              "timeout": 90,
               "pathName": "No Reply",
               "randomize": false,
               "reprompts": [
@@ -13849,7 +14328,7 @@
               "types": [
                 "reprompt"
               ],
-              "timeout": 30,
+              "timeout": 90,
               "pathName": "No Reply",
               "randomize": false,
               "reprompts": [
@@ -14098,7 +14577,7 @@
               "types": [
                 "reprompt"
               ],
-              "timeout": 30,
+              "timeout": 90,
               "pathName": "No Reply",
               "randomize": false,
               "reprompts": [
@@ -14347,7 +14826,7 @@
               "types": [
                 "reprompt"
               ],
-              "timeout": 30,
+              "timeout": 90,
               "pathName": "No Reply",
               "randomize": false,
               "reprompts": [
@@ -14596,7 +15075,7 @@
               "types": [
                 "reprompt"
               ],
-              "timeout": 30,
+              "timeout": 90,
               "pathName": "No Reply",
               "randomize": false,
               "reprompts": [
@@ -14717,10 +15196,10 @@
     "61c65d04975c6f001b4d4866": {
       "_id": "61c65d04975c6f001b4d4866",
       "name": "print saved order",
-      "zoom": 62.51808558031913,
+      "zoom": 70.4919031870862,
       "offsetX": 272,
       "offsetY": 104,
-      "modified": 1640393794,
+      "modified": 1640954555,
       "nodes": {
         "61c47620b97af89de2ca38e0": {
           "nodeID": "61c47620b97af89de2ca38e0",
@@ -14780,7 +15259,7 @@
             "dialogs": [
               {
                 "voice": "Alexa",
-                "content": "You have ordered: "
+                "content": "Order information: "
               }
             ],
             "ports": [
@@ -14803,6 +15282,7 @@
             "name": "print order",
             "color": "standard",
             "steps": [
+              "61c74e0de0dd16ab23c8e61d",
               "61c47649b97af89de2ca3933",
               "61c4ee37aac20057b5a284a6"
             ]
@@ -16648,6 +17128,27 @@
               "61c66c2e1bb7d2324cd96b2b"
             ]
           }
+        },
+        "61c74e0de0dd16ab23c8e61d": {
+          "nodeID": "61c74e0de0dd16ab23c8e61d",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Customer name: {{[name_order].name_order}} "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c47649b97af89de2ca3933",
+                "id": "61c74e0de0dd16ab23c8e620"
+              }
+            ]
+          }
         }
       },
       "children": [],
@@ -16661,10 +17162,10 @@
       "_id": "61c66451975c6f001b4d4867",
       "name": "order_number",
       "type": "COMPONENT",
-      "zoom": 31.64461211487659,
+      "zoom": 23.88243861620631,
       "offsetX": 401,
       "offsetY": 108,
-      "modified": 1640393989,
+      "modified": 1640954533,
       "nodes": {
         "61c664511bb7d2324cd9659c": {
           "nodeID": "61c664511bb7d2324cd9659c",
@@ -16691,7 +17192,7 @@
           "type": "random",
           "data": {
             "paths": 8,
-            "noDuplicates": true,
+            "noDuplicates": false,
             "ports": [
               {
                 "type": "",
@@ -17106,7 +17607,7 @@
           "type": "random",
           "data": {
             "paths": 8,
-            "noDuplicates": true,
+            "noDuplicates": false,
             "ports": [
               {
                 "type": "",
@@ -17473,7 +17974,7 @@
             "ports": [
               {
                 "type": "next",
-                "target": null,
+                "target": "61c74d5de0dd16ab23c8e529",
                 "id": "61c665491bb7d2324cd965ef"
               }
             ]
@@ -17490,7 +17991,8 @@
             "name": "get id",
             "color": "standard",
             "steps": [
-              "61c665491bb7d2324cd965ed"
+              "61c665491bb7d2324cd965ed",
+              "61c74d5de0dd16ab23c8e529"
             ]
           }
         },
@@ -18141,7 +18643,7 @@
           "type": "random",
           "data": {
             "paths": 8,
-            "noDuplicates": true,
+            "noDuplicates": false,
             "ports": [
               {
                 "type": "",
@@ -18264,7 +18766,7 @@
           "type": "random",
           "data": {
             "paths": 8,
-            "noDuplicates": true,
+            "noDuplicates": false,
             "ports": [
               {
                 "type": "",
@@ -19151,6 +19653,65 @@
             "color": "standard",
             "steps": [
               "61c668801bb7d2324cd967bb"
+            ]
+          }
+        },
+        "61c74d5de0dd16ab23c8e529": {
+          "nodeID": "61c74d5de0dd16ab23c8e529",
+          "type": "google_sheets",
+          "data": {
+            "user": {
+              "created_at": "2021-12-22T23:07:20.514Z",
+              "creator_id": 78782,
+              "project_id": null,
+              "platform": "Google Sheets",
+              "user_id": "106455312214053924915",
+              "user_data": {
+                "email": "lekang0522@gmail.com",
+                "name": "Lekang Jiang"
+              },
+              "integration_user_id": "gs_int_106455312214053924915",
+              "requires_refresh": null
+            },
+            "sheet": {
+              "value": 0,
+              "label": "order"
+            },
+            "endRow": "",
+            "mapping": [
+              {
+                "arg1": {
+                  "value": "row_number",
+                  "label": "Row Number"
+                },
+                "arg2": "row"
+              }
+            ],
+            "startRow": "",
+            "rowNumber": "",
+            "rowValues": [],
+            "matchValue": "{{[order_id].order_id}}",
+            "spreadsheet": {
+              "value": "1qhWCIbfWGYU6ZV0YN2PPfUth_FJaVRWDZ0K_pWRmSeU",
+              "label": "Burger Box Order"
+            },
+            "headerColumn": {
+              "value": 11,
+              "label": "Order ID (11)"
+            },
+            "selectedAction": "Retrieve Data",
+            "selectedIntegration": "Google Sheets",
+            "ports": [
+              {
+                "type": "next",
+                "target": "61c6645b1bb7d2324cd965a4",
+                "id": "61c74d5de0dd16ab23c8e52b"
+              },
+              {
+                "type": "fail",
+                "target": null,
+                "id": "61c74d5de0dd16ab23c8e52c"
+              }
             ]
           }
         }
